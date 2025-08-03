@@ -22,7 +22,7 @@ function SectionContainer({
         ref.current[num] = el;
       }}
       id={id}
-      className={`sticky top-[95px] main mx-[15px] md:mx-auto rounded-[1.5rem] h-[calc(100vh-110px)] ${
+      className={`relative main mx-[15px] md:mx-auto rounded-[1.5rem] h-[calc(100vh-110px)] ${
         mt && "mt-8"
       } p-[10px] `}
       style={{

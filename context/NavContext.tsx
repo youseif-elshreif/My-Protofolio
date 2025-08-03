@@ -16,114 +16,65 @@ export function NavProvider({ children }: { children: ReactNode }) {
   const [activeSection, setActiveSection] = useState("0");
   const sectionsRef = useRef<HTMLElement[]>([]);
   const tops = useRef<number[]>([]);
-  const ticking = useRef(false);
   const navHeight = useRef(0);
 
-  // إعادة حساب المواقع عند تغيير حجم الشاشة أو المحتوى
-  const calculateTops = useCallback(() => {
+  useEffect(() => {
     navHeight.current = document.querySelector("header")?.clientHeight || 0;
 
-    tops.current = sectionsRef.current.map((section) =>
-      section ? section.offsetTop : 0
+    tops.current = sectionsRef.current.map(
+      (section) => section?.offsetTop || 0
     );
-  }, []);
+    if (window.innerWidth <= 768) return;
+    let throttleTimer: NodeJS.Timeout | null = null;
 
-  useEffect(() => {
-    calculateTops();
-
-    // إضافة listener لإعادة الحساب عند تغيير حجم الشاشة
-    const handleResize = () => {
-      calculateTops();
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    // إعادة حساب المواقع بعد تحميل الصور أو تغيير المحتوى
-    const handleLoad = () => {
-      calculateTops();
-    };
-
-    window.addEventListener("load", handleLoad);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-      window.removeEventListener("load", handleLoad);
-    };
-  }, [calculateTops]);
-
-  useEffect(() => {
-    const updateActiveSection = () => {
-      const scrollY = window.scrollY;
-      const viewportHeight = window.innerHeight;
-      const viewportCenter = scrollY + viewportHeight / 2;
-
-      let closestIndex = 0;
-      let minDiff = Infinity;
-
-      // التأكد من وجود sections
-      if (tops.current.length === 0) {
-        ticking.current = false;
+    const handleScroll = () => {
+      if (throttleTimer !== null) {
         return;
       }
 
-      // استخدام منتصف الشاشة لتحديد القسم النشط
-      tops.current.forEach((top, index) => {
-        if (top === 0 && index > 0) return; // تجاهل العناصر غير الموجودة
+      throttleTimer = setTimeout(() => {
+        throttleTimer = null;
 
-        const diff = Math.abs(viewportCenter - top);
-        if (diff < minDiff) {
-          minDiff = diff;
-          closestIndex = index;
+        const scrollPosition = window.scrollY + navHeight.current + 100; // إضافة offset للدقة
+
+        // البحث عن القسم النشط بناءً على موقع التمرير
+        for (let i = sectionsRef.current.length - 1; i >= 0; i--) {
+          const section = sectionsRef.current[i];
+          if (section && section.offsetTop <= scrollPosition) {
+            setActiveSection(i.toString());
+            break;
+          }
         }
-      });
-
-      setActiveSection((prev) =>
-        prev !== String(closestIndex) ? String(closestIndex) : prev
-      );
-
-      ticking.current = false;
+      }, 10); // throttle كل 10ms
     };
 
-    const handleScroll = () => {
-      if (!ticking.current) {
-        requestAnimationFrame(updateActiveSection);
-        ticking.current = true;
-      }
-    };
-
-    // التأكد من وجود sections قبل البدء
-    if (sectionsRef.current.length > 0) {
-      updateActiveSection(); // Initial call
-    }
-
+    // إضافة مستمع للتمرير
     window.addEventListener("scroll", handleScroll, { passive: true });
 
+    // استدعاء الدالة مرة واحدة لتحديد القسم النشط عند التحميل
+    handleScroll();
+
+    // تنظيف المستمع عند إلغاء التحميل
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      if (throttleTimer) {
+        clearTimeout(throttleTimer);
+      }
     };
   }, []);
 
   const scrollToSection = useCallback((sectionId: string) => {
-    const index = parseInt(sectionId);
+    const section = sectionsRef.current[parseInt(sectionId)];
 
-    // التأكد من صحة الفهرس
-    if (index < 0 || index >= tops.current.length) {
-      console.warn(`Invalid section index: ${index}`);
-      return;
+    if (section) {
+      const top = section.offsetTop;
+      // تحديث القسم النشط فوراً
+
+      window.scrollTo({
+        top: top - navHeight.current,
+        behavior: "smooth",
+      });
     }
-
-    const targetTop = tops.current[index];
-
-    // التأكد من وجود الموقع
-    if (targetTop === undefined) {
-      console.warn(`Section at index ${index} not found`);
-      return;
-    }
-
-    window.scrollTo({
-      top: Math.max(0, targetTop - navHeight.current),
-      behavior: "smooth",
-    });
   }, []);
 
   return (

@@ -9,22 +9,20 @@ export default function DesktopNav({ sections, socialLinks }: DesktopNavProps) {
   const buttonRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
   useEffect(() => {
-    const activeIndex = sections.findIndex((s) => s.id === activeSection);
+    const activeIndex = parseInt(activeSection);
     const activeButton = buttonRefs.current[activeIndex];
 
-    if (activeButton) {
+    if (activeButton && activeButton.parentElement?.parentElement) {
       const parentRect =
-        activeButton.parentElement?.parentElement?.getBoundingClientRect();
+        activeButton.parentElement.parentElement.getBoundingClientRect();
       const buttonRect = activeButton.getBoundingClientRect();
 
-      if (parentRect) {
-        setIndicatorStyle({
-          width: buttonRect.width,
-          left: buttonRect.left - parentRect.left,
-        });
-      }
+      setIndicatorStyle({
+        width: buttonRect.width,
+        left: buttonRect.left - parentRect.left,
+      });
     }
-  }, [activeSection, sections]);
+  }, [activeSection]);
 
   return (
     <>
@@ -38,11 +36,11 @@ export default function DesktopNav({ sections, socialLinks }: DesktopNavProps) {
       >
         {/* Sliding Background */}
         <div
-          className="indicator absolute top-1/2 translate-x-0 -translate-y-1/2 h-8 backdrop-blur-sm rounded-full transition-all duration-300 ease-out shadow-md"
+          className="indicator absolute top-1/2 translate-x-0 -translate-y-1/2 h-8 backdrop-blur-sm rounded-full transition-all duration-500 ease-in-out shadow-md"
           style={{
             backgroundColor: "var(--nav-indicator)",
             width: `${indicatorStyle.width}px`,
-            transform: `translateX(${indicatorStyle.left - 15}px)`,
+            transform: `translateX(${indicatorStyle.left - 15}px) `,
           }}
         />
 

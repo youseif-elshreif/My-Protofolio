@@ -4,8 +4,7 @@ import { useNav } from "../../context/NavContext";
 import { MobileNavProps } from "../../utils/types";
 
 function MobileNav({ sections, isMenuOpen, setIsMenuOpen }: MobileNavProps) {
-  const { activeSection, scrollToSection } = useNav();
-  const [indicatorStyle, setIndicatorStyle] = useState({ width: 0, left: 0 });
+  const { scrollToSection } = useNav();
   const [isClosing, setIsClosing] = useState(false);
   const buttonRefs = useRef<(HTMLButtonElement | null)[]>([]);
   const menuRef = useRef<HTMLUListElement>(null);
@@ -18,27 +17,6 @@ function MobileNav({ sections, isMenuOpen, setIsMenuOpen }: MobileNavProps) {
       setIsClosing(false);
     }, 300);
   };
-
-  // Update indicator position when activeSection changes
-  useEffect(() => {
-    if (isMenuOpen) {
-      const activeIndex = sections.findIndex((s) => s.id === activeSection);
-      const activeButton = buttonRefs.current[activeIndex];
-
-      if (activeButton) {
-        const parentRect =
-          activeButton.parentElement?.parentElement?.getBoundingClientRect();
-        const buttonRect = activeButton.getBoundingClientRect();
-
-        if (parentRect) {
-          setIndicatorStyle({
-            width: buttonRect.width,
-            left: buttonRect.left - parentRect.left,
-          });
-        }
-      }
-    }
-  }, [activeSection, sections, isMenuOpen]);
 
   // Handle click outside to close menu
   useEffect(() => {
@@ -96,16 +74,6 @@ function MobileNav({ sections, isMenuOpen, setIsMenuOpen }: MobileNavProps) {
                     color: "var(--text-secondary)",
                   }}
                 >
-                  {/* Sliding Background */}
-                  <div
-                    className="indicator absolute top-1/2 -translate-y-1/2 h-8 backdrop-blur-sm rounded-full transition-all duration-300 ease-out shadow-md"
-                    style={{
-                      backgroundColor: "var(--nav-indicator)",
-                      width: `${indicatorStyle.width}px`,
-                      left: `${indicatorStyle.left}px`,
-                    }}
-                  />
-
                   {sections.map((section, index) => (
                     <li key={section.id} className="relative z-10">
                       <button
