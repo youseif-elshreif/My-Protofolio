@@ -24,7 +24,7 @@ function HomeContent() {
       <CodePatternBackground />
 
       <Nav />
-      <main className=" pt-[85px] pb-[50px] relative">
+      <main className="pt-[95px] lg:pt-[105px] pb-[50px] relative">
         {sections.map((sec, index) => (
           <SectionContainer
             ref={sectionsRef}

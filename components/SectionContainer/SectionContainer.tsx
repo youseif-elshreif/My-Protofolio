@@ -22,11 +22,11 @@ function SectionContainer({
         ref.current[num] = el;
       }}
       id={id}
-      className={`relative main mx-[15px] md:mx-auto rounded-[1.5rem] h-[calc(100vh-110px)] ${
+      className={`relative main mx-[15px] md:mx-auto rounded-[.9rem] h-fit ${
         mt && "mt-8"
-      } p-[10px] `}
+      }  `}
       style={{
-        backgroundColor: "var(--nav-bg)",
+        backgroundColor: "var(--sec-bg)",
         border: "2px solid var(--nav-border)",
       }}
     >

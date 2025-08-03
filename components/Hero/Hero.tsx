@@ -7,8 +7,8 @@ import { useNav } from "../../context/NavContext";
 function Hero() {
   const { scrollToSection } = useNav();
   return (
-    <div className="px-[10px] w-full flex flex-col-reverse md:flex-row items-center justify-between gap-[1em] h-auto lg:h-auto">
-      <div className={`${styles.imgContainer} flex-shrink-0`}>
+    <div className=" w-full overflow-hidden flex flex-col-reverse md:flex-row items-center justify-between gap-[1em]  ">
+      <div className={`${styles.imgContainer} flex-shrink-0 `}>
         <Image
           src={Pic}
           alt="Youseif's Img"
