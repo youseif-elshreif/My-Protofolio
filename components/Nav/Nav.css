@@ -1,0 +1,103 @@
+.sections {
+  transform: all 0.8s ease;
+  -webkit-transform: all 0.8s ease;
+  -moz-transform: all 0.8s ease;
+  -ms-transform: all 0.8s ease;
+  -o-transform: all 0.8s ease;
+  animation: nav 0.8s ease forwards;
+  -webkit-animation: nav 0.8s ease forwards;
+}
+
+.indicator::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 80%;
+  height: 3px;
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 1);
+  transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  box-shadow: 0px 5px 75px 25px rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: 0px 5px 75px 25px rgba(255, 255, 255, 0.3);
+  -moz-box-shadow: 0px 5px 75px 25px rgba(255, 255, 255, 0.3);
+}
+
+.mobNav {
+  max-height: calc(100vh - 65px);
+  overflow-y: auto;
+  animation: slideDown 0.3s ease-out forwards;
+  transform-origin: top;
+}
+
+.mobNav.closing {
+  animation: slideUp 0.3s ease-in forwards;
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px) scaleY(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scaleY(1);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scaleY(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px) scaleY(0.95);
+  }
+}
+
+@keyframes fadeOutDown {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+@keyframes nav {
+  0% {
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    color: black;
+    border: 1px solid rgba(255, 255, 255, 0);
+  }
+  100% {
+    /* border-white/20 */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.18);
+    box-shadow: -1px 10px 352px 67px rgba(255, 255, 255, 0.3);
+    -webkit-box-shadow: -1px 10px 352px 67px rgba(255, 255, 255, 0.3);
+    -moz-box-shadow: -1px 10px 352px 67px rgba(255, 255, 255, 0.3);
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    -moz-backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: -1px 10px 352px 67px rgba(255, 255, 255, 0.1);
+    -webkit-box-shadow: -1px 10px 352px 67px rgba(255, 255, 255, 0.1);
+    -moz-box-shadow: -1px 10px 352px 67px rgba(255, 255, 255, 0.1);
+    color: black;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}

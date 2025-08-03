@@ -1,0 +1,147 @@
+@import "tailwindcss";
+
+/* CSS Variables for Colors */
+:root {
+  /* Main Theme Colors */
+  --bg-primary: #111;
+  --bg-secondary: #1a1a1a;
+  --bg-tertiary: #2a2a2a;
+
+  /* Text Colors */
+  --text-primary: #e3e3e3;
+  --text-secondary: #ffffff;
+  --text-muted: #9ca3af;
+  --text-hover: #d1d5db;
+
+  --sec-bg: rgba(0, 0, 0, 0.5);
+  /* Navigation Colors */
+  --nav-bg: rgba(255, 255, 255, 0.1);
+  --nav-border: rgba(255, 255, 255, 0.2);
+  --nav-indicator: rgba(255, 255, 255, 0.2);
+
+  /* Mobile Menu Colors */
+  --mobile-bg: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.9),
+    rgba(55, 65, 81, 0.8)
+  );
+  --mobile-border: #4b5563;
+  --mobile-item-bg: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.2),
+    rgba(209, 213, 217, 0.2)
+  );
+  --mobile-item-border: rgba(156, 163, 175, 0.4);
+  --mobile-hover-border: rgba(107, 114, 128, 0.5);
+  --mobile-gradient-line: linear-gradient(to right, #ffffff, #d1d5db);
+
+  /* Scrollbar Colors */
+  --scrollbar-track: #1a1a1a;
+  --scrollbar-thumb: linear-gradient(180deg, #444 0%, #333 100%);
+  --scrollbar-thumb-hover: linear-gradient(180deg, #555 0%, #444 100%);
+  --scrollbar-border: #2a2a2a;
+}
+
+.font-inter {
+  font-family: var(--font-inter), "Inter", sans-serif;
+}
+
+.font-ibm-plex {
+  font-family: var(--font-ibm-plex), "IBM Plex Sans", sans-serif;
+}
+
+/* Custom Scrollbar */
+* {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #444 var(--scrollbar-track);
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 4px;
+  border: 1px solid var(--scrollbar-border);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+*::-webkit-scrollbar-corner {
+  background: var(--scrollbar-track);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.containeer {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Hide scrollbar but keep functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+/* Custom Navigation Scrollbar */
+.nav-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+.nav-scrollbar::-webkit-scrollbar {
+  height: 4px;
+}
+
+.nav-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 2px;
+}
+
+.nav-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  transition: background 0.3s ease;
+}
+
+.nav-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
