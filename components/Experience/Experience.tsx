@@ -17,7 +17,7 @@ function Experience() {
         {/* Section Header */}
         <div className="flex items-center gap-4 mb-10">
           <div
-            className="p-3 rounded-xl backdrop-blur-sm border transition-all duration-300 hover:scale-105"
+            className="p-3 rounded-xl border transition-all duration-300 hover:scale-105"
             style={{
               backgroundColor: "var(--nav-bg)",
               borderColor: "var(--nav-border)",
@@ -41,7 +41,7 @@ function Experience() {
           {workExperience.map((exp, index) => (
             <div
               key={exp.id}
-              className="group p-6 rounded-2xl backdrop-blur-sm border transition-all duration-500 hover:shadow-xl hover:-translate-y-1"
+              className="group p-6 rounded-2xl border transition-all duration-500 hover:shadow-xl hover:-translate-y-1"
               style={{
                 backgroundColor: "var(--card-bg)",
                 borderColor: "var(--card-border)",
@@ -120,7 +120,7 @@ function Experience() {
                   {exp.technologies.map((tech: string, techIndex: number) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 rounded-lg text-sm font-medium border backdrop-blur-sm transition-all duration-300 hover:scale-105"
+                      className="px-3 py-1 rounded-lg text-sm font-medium border  transition-all duration-300 hover:scale-105"
                       style={{
                         backgroundColor: "var(--nav-bg)",
                         borderColor: "var(--nav-border)",
@@ -143,7 +143,7 @@ function Experience() {
         {/* Section Header */}
         <div className="flex items-center gap-4 mb-10">
           <div
-            className="p-3 rounded-xl backdrop-blur-sm border transition-all duration-300 hover:scale-105"
+            className="p-3 rounded-xl  border transition-all duration-300 hover:scale-105"
             style={{
               backgroundColor: "var(--nav-bg)",
               borderColor: "var(--nav-border)",
@@ -167,7 +167,7 @@ function Experience() {
           {volunteeringExperience.map((exp, index) => (
             <div
               key={exp.id}
-              className="group p-6 rounded-2xl backdrop-blur-sm border transition-all duration-500 hover:shadow-xl hover:-translate-y-1"
+              className="group p-6 rounded-2xl  border transition-all duration-500 hover:shadow-xl hover:-translate-y-1"
               style={{
                 backgroundColor: "var(--card-bg)",
                 borderColor: "var(--card-border)",

@@ -13,7 +13,7 @@ const Card: React.FC<Project> = ({
 }) => {
   return (
     <div
-      className="max-w-[300px] w-full mx-auto my-8 rounded-[1.25em] backdrop-blur-[0.75em] shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out group border border-white/10"
+      className="max-w-[300px] w-full mx-auto my-8 rounded-[1.25em] shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out group border border-white/10"
       style={{
         backgroundColor: "var(--nav-bg)",
         boxShadow: "0 0 0 0.1em hsla(0, 0%, 100%, 0.1) inset",
@@ -47,7 +47,7 @@ const Card: React.FC<Project> = ({
                 {techs.map((tech: string, i: number) => (
                   <span
                     key={i}
-                    className="text-xs px-2 py-1 rounded-full backdrop-blur-sm border border-white/10 text-white"
+                    className="text-xs px-2 py-1 rounded-full border border-white/10 text-white"
                     style={{
                       backgroundColor: "var(--nav-bg)",
                     }}

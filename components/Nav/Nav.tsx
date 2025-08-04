@@ -12,7 +12,7 @@ function Nav() {
   // باقي الكود هيجي هنا لاحقاً لما نضيف scroll detection
 
   return (
-    <header className="fixed top-0 w-full mb-4 header z-50 backdrop-blur">
+    <header className="fixed top-0 w-full mb-4 header z-50 ">
       <nav className="containeer flex justify-between items-center py-4">
         <h1
           className="font-inter text-2xl font-bold"

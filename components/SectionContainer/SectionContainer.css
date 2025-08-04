@@ -21,7 +21,6 @@
   width: calc(100% + 20px);
   height: calc(100% + 20px);
   background: var(--nav-bg);
-  backdrop-filter: blur(20px);
   z-index: -1;
   top: 50%;
   left: 50%;
