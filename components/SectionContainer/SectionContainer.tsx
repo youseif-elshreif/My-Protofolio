@@ -7,7 +7,7 @@ function SectionContainer({
   mt = true,
   id,
   // ref,
-  num,
+  // num,
 }: {
   children: React.ReactNode;
   title: string;
