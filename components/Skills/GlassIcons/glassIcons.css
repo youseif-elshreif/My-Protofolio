@@ -1,3 +1,26 @@
+.icon:after {
+  content: "";
+  position: absolute;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  z-index: -1;
+  border-radius: 1.5rem;
+  -webkit-border-radius: 1.5rem;
+  -moz-border-radius: 1.5rem;
+  -ms-border-radius: 1.5rem;
+  -o-border-radius: 1.5rem;
+  background-color: transparent;
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+}
+
 @media (min-width: 1024px) {
   .group:hover > span:nth-child(1) {
     transform: rotate(25deg) translate3d(-0.5em, -0.5em, 0.5em);

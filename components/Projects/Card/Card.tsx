@@ -20,10 +20,7 @@ const Card: React.FC<Project> = ({
       }}
     >
       <div className="relative overflow-hidden p-2 h-full rounded-[.25em]">
-        <div
-          className="absolute inset-0 rounded-[1.25em] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-          style={{ backgroundColor: "hsla(0, 0%, 100%, 0.05)" }}
-        />
+        <div className="absolute inset-0 rounded-[1.25em] bg-[var(--card-bg)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
 
         <div className="flex  flex-col h-full">
           {/* Image */}

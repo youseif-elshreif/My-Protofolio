@@ -11,7 +11,6 @@ import { NavProvider, useNav } from "../../context/NavContext";
 // import CodePatternBackground from "../../components/CodePatternBackground/CodePatternBackground";
 function HomeContent() {
   const { sectionsRef } = useNav();
-  // rgb(179 169 169 / 30%)
   const sections = [
     { id: 0, title: "ABOUT", mt: false, ele: <Hero /> },
     { id: 1, title: "SKILLS", ele: <Skills /> },
