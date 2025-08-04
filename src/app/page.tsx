@@ -26,7 +26,9 @@ export default function Home() {
 
       {/* <Nav /> */}
       <main className="pt-[95px] lg:pt-[105px] pb-[50px] relative">
-        {sections.map((sec, index) => (
+        <Hero />
+        <Projects />
+        {/* {sections.map((sec, index) => (
           <SectionContainer
             // ref={sectionsRef}
             key={sec.id}
@@ -37,7 +39,7 @@ export default function Home() {
           >
             {sec.ele}
           </SectionContainer>
-        ))}
+        ))} */}
         <ContactMe />
       </main>
       <Footer />
