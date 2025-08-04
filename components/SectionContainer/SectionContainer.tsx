@@ -6,21 +6,21 @@ function SectionContainer({
   title,
   mt = true,
   id,
-  ref,
+  // ref,
   num,
 }: {
   children: React.ReactNode;
   title: string;
   mt?: boolean;
   id?: string;
-  ref: any;
+  // ref: any;
   num: number;
 }) {
   return (
     <section
-      ref={(el) => {
-        ref.current[num] = el;
-      }}
+      // ref={(el) => {
+      //   ref.current[num] = el;
+      // }}
       id={id}
       className={`relative main mx-[15px] md:mx-auto rounded-[.9rem] h-fit ${
         mt && "mt-8"

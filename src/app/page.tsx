@@ -7,10 +7,11 @@ import Skills from "../../components/Skills/Skills";
 import Projects from "../../components/Projects/Projects";
 import Experience from "../../components/Experience/Experience";
 import ContactMe from "../../components/ContactMe/ContactMe";
-import { NavProvider, useNav } from "../../context/NavContext";
+// import { NavProvider, useNav } from "../../context/NavContext";
 // import CodePatternBackground from "../../components/CodePatternBackground/CodePatternBackground";
-function HomeContent() {
-  const { sectionsRef } = useNav();
+// function HomeContent() {
+export default function Home() {
+  // const { sectionsRef } = useNav();
 
   const sections = [
     { id: 0, title: "ABOUT", mt: false, ele: <Hero /> },
@@ -27,7 +28,7 @@ function HomeContent() {
       <main className="pt-[95px] lg:pt-[105px] pb-[50px] relative">
         {sections.map((sec, index) => (
           <SectionContainer
-            ref={sectionsRef}
+            // ref={sectionsRef}
             key={sec.id}
             num={index}
             title={sec.title}
@@ -44,10 +45,10 @@ function HomeContent() {
   );
 }
 
-export default function Home() {
-  return (
-    <NavProvider>
-      <HomeContent />
-    </NavProvider>
-  );
-}
+// export default function Home() {
+//   return (
+//     <NavProvider>
+//       <HomeContent />
+//     </NavProvider>
+//   );
+// }
