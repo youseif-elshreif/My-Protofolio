@@ -18,50 +18,50 @@ export function NavProvider({ children }: { children: ReactNode }) {
   const tops = useRef<number[]>([]);
   const navHeight = useRef(0);
 
-  // useEffect(() => {
-  //   navHeight.current = document.querySelector("header")?.clientHeight || 0;
+  useEffect(() => {
+    navHeight.current = document.querySelector("header")?.clientHeight || 0;
 
-  //   tops.current = sectionsRef.current.map(
-  //     (section) => section?.offsetTop || 0
-  //   );
-  //   if (window.innerWidth <= 768) return;
-  //   let throttleTimer: NodeJS.Timeout | null = null;
+    tops.current = sectionsRef.current.map(
+      (section) => section?.offsetTop || 0
+    );
+    if (window.innerWidth <= 768) return;
+    let throttleTimer: NodeJS.Timeout | null = null;
 
-  //   const handleScroll = () => {
-  //     if (throttleTimer !== null) {
-  //       return;
-  //     }
+    const handleScroll = () => {
+      if (throttleTimer !== null) {
+        return;
+      }
 
-  //     throttleTimer = setTimeout(() => {
-  //       throttleTimer = null;
+      throttleTimer = setTimeout(() => {
+        throttleTimer = null;
 
-  //       const scrollPosition = window.scrollY + navHeight.current + 100; // إضافة offset للدقة
+        const scrollPosition = window.scrollY + navHeight.current + 100; // إضافة offset للدقة
 
-  //       // البحث عن القسم النشط بناءً على موقع التمرير
-  //       for (let i = sectionsRef.current.length - 1; i >= 0; i--) {
-  //         const section = sectionsRef.current[i];
-  //         if (section && section.offsetTop <= scrollPosition) {
-  //           setActiveSection(i.toString());
-  //           break;
-  //         }
-  //       }
-  //     }, 10); // throttle كل 10ms
-  //   };
+        // البحث عن القسم النشط بناءً على موقع التمرير
+        for (let i = sectionsRef.current.length - 1; i >= 0; i--) {
+          const section = sectionsRef.current[i];
+          if (section && section.offsetTop <= scrollPosition) {
+            setActiveSection(i.toString());
+            break;
+          }
+        }
+      }, 10); // throttle كل 10ms
+    };
 
-  //   // إضافة مستمع للتمرير
-  //   window.addEventListener("scroll", handleScroll, { passive: true });
+    // إضافة مستمع للتمرير
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
-  //   // استدعاء الدالة مرة واحدة لتحديد القسم النشط عند التحميل
-  //   handleScroll();
+    // استدعاء الدالة مرة واحدة لتحديد القسم النشط عند التحميل
+    handleScroll();
 
-  //   // تنظيف المستمع عند إلغاء التحميل
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //     if (throttleTimer) {
-  //       clearTimeout(throttleTimer);
-  //     }
-  //   };
-  // }, []);
+    // تنظيف المستمع عند إلغاء التحميل
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (throttleTimer) {
+        clearTimeout(throttleTimer);
+      }
+    };
+  }, []);
 
   const scrollToSection = useCallback((sectionId: string) => {
     const section = sectionsRef.current[parseInt(sectionId)];
