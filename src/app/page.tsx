@@ -8,7 +8,7 @@ import Projects from "../../components/Projects/Projects";
 import Experience from "../../components/Experience/Experience";
 import ContactMe from "../../components/ContactMe/ContactMe";
 import { NavProvider, useNav } from "../../context/NavContext";
-import CodePatternBackground from "../../components/CodePatternBackground/CodePatternBackground";
+// import CodePatternBackground from "../../components/CodePatternBackground/CodePatternBackground";
 function HomeContent() {
   const { sectionsRef } = useNav();
 
@@ -21,9 +21,9 @@ function HomeContent() {
 
   return (
     <>
-      <CodePatternBackground />
+      {/* <CodePatternBackground /> */}
 
-      <Nav />
+      {/* <Nav /> */}
       <main className="pt-[95px] lg:pt-[105px] pb-[50px] relative">
         {sections.map((sec, index) => (
           <SectionContainer
