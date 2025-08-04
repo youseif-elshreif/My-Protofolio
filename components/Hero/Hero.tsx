@@ -3,9 +3,9 @@
 import Image from "next/image";
 import Pic from "../../public/Lumii_20250624_142647142.jpg";
 import styles from "./hero.module.css";
-// import { useNav } from "../../context/NavContext";
+import { useNav } from "../../context/NavContext";
 function Hero() {
-  // const { scrollToSection } = useNav();
+  const { scrollToSection } = useNav();
   return (
     <div className=" w-full overflow-hidden flex flex-col-reverse md:flex-row items-center justify-between gap-[1em]  ">
       <div className={`${styles.imgContainer} flex-shrink-0 `}>
@@ -53,13 +53,13 @@ function Hero() {
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start">
           <button
-            // onClick={() => scrollToSection("2")}
+            onClick={() => scrollToSection("2")}
             className="px-6 cursor-pointer sm:px-8 py-3 sm:py-4 bg-[var(--text-secondary)] text-[var(--bg-primary)] rounded-lg font-semibold hover:bg-[var(--text-hover)] transition-all duration-300 hover:scale-105 text-sm sm:text-base"
           >
             View Projects
           </button>
           <button
-            // onClick={() => scrollToSection("1")}
+            onClick={() => scrollToSection("1")}
             className="px-6 cursor-pointer sm:px-8 py-3 sm:py-4 border-2 border-[var(--nav-border)] rounded-lg font-semibold text-[var(--text-secondary)] hover:border-[var(--text-hover)] hover:bg-[var(--nav-bg)] transition-all duration-300 hover:scale-105 text-sm sm:text-base"
           >
             My Skills
