@@ -1,21 +1,23 @@
-.group:hover > span:nth-child(1) {
-  transform: rotate(25deg) translate3d(-0.5em, -0.5em, 0.5em);
-  -webkit-transform: rotate(25deg) translate3d(-0.5em, -0.5em, 0.5em);
-  -moz-transform: rotate(25deg) translate3d(-0.5em, -0.5em, 0.5em);
-  -ms-transform: rotate(25deg) translate3d(-0.5em, -0.5em, 0.5em);
-  -o-transform: rotate(25deg) translate3d(-0.5em, -0.5em, 0.5em);
-}
-.group:hover > span:nth-child(2) {
-  transform: translateZ(2em);
-  -webkit-transform: translateZ(2em);
-  -moz-transform: translateZ(2em);
-  -ms-transform: translateZ(2em);
-  -o-transform: translateZ(2em);
-}
-.group:hover > span:last-child {
-  transform: translateY(20%);
-  -webkit-transform: translateY(20%);
-  -moz-transform: translateY(20%);
-  -ms-transform: translateY(20%);
-  -o-transform: translateY(20%);
+@media (min-width: 1024px) {
+  .group:hover > span:nth-child(1) {
+    transform: rotate(25deg) translate3d(-0.5em, -0.5em, 0.5em);
+    -webkit-transform: rotate(25deg) translate3d(-0.5em, -0.5em, 0.5em);
+    -moz-transform: rotate(25deg) translate3d(-0.5em, -0.5em, 0.5em);
+    -ms-transform: rotate(25deg) translate3d(-0.5em, -0.5em, 0.5em);
+    -o-transform: rotate(25deg) translate3d(-0.5em, -0.5em, 0.5em);
+  }
+  .group:hover > span:nth-child(2) {
+    transform: translateZ(2em);
+    -webkit-transform: translateZ(2em);
+    -moz-transform: translateZ(2em);
+    -ms-transform: translateZ(2em);
+    -o-transform: translateZ(2em);
+  }
+  .group:hover > span:last-child {
+    transform: translateY(20%);
+    -webkit-transform: translateY(20%);
+    -moz-transform: translateY(20%);
+    -ms-transform: translateY(20%);
+    -o-transform: translateY(20%);
+  }
 }
