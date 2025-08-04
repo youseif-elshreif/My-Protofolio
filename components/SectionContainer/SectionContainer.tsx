@@ -31,7 +31,7 @@ function SectionContainer({
       }}
     >
       <Header title={title} />
-      <div className="overflow-hidden rounded-b-[.8rem] h-[calc(100%-65px)]">
+      <div className="overflow-hidden px-[10px] rounded-b-[.8rem] h-[calc(100%-65px)]">
         <div className="overflow-y-auto overflow-x-hidden h-full block md:flex">
           {children}
         </div>
