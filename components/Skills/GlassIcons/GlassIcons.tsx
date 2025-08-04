@@ -20,7 +20,7 @@ const GlassIcons: React.FC<GlassIconsProps> = ({ items }) => {
           ></span>
 
           {/* خلفية زجاجية وهمية (بدون blur فعلي) */}
-          <span className="absolute icon top-0 left-0 w-full h-full rounded-[1.25em] bg-white/10 border border-white/20 shadow-[inset_0_0_0_0.1em_rgba(255,255,255,0.3)] transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.83,0,0.17,1)] origin-[80%_50%] flex">
+          <span className="absolute top-0 left-0 w-full h-full rounded-[1.25em] bg-white/10 border border-white/20 shadow-[inset_0_0_0_0.1em_rgba(255,255,255,0.3)] transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.83,0,0.17,1)] origin-[80%_50%] flex">
             <span
               className="m-auto w-[3em] h-[3em] flex items-center justify-center"
               aria-hidden="true"
