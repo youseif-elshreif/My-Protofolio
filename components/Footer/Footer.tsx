@@ -59,7 +59,7 @@ function Footer() {
             </h3>
             <div className="space-y-3">
               <a
-                href="mailto:your.email@example.com"
+                href="mailto:youseifelshreif3@gmail.com"
                 className="flex items-center gap-3 text-sm font-ibm-plex transition-colors duration-200 transform"
                 style={{ color: "var(--text-muted)" }}
                 onMouseEnter={(e) => {
@@ -70,12 +70,12 @@ function Footer() {
                 }}
               >
                 <FaEnvelope className="text-xs" />
-                <span>your.email@example.com</span>
+                <span>youseifelshreif3@gmail.com</span>
               </a>
               <span>
                 <a
                   href="tel:+201277906691"
-                  className="flex items-center gap-3 text-sm font-ibm-plex transition-colors duration-200  transform"
+                  className="flex items-center gap-3 text-sm font-ibm-plex transition-colors duration-200  transform mb-2"
                   style={{ color: "var(--text-muted)" }}
                   onMouseEnter={(e) => {
                     (e.target as HTMLElement).style.color = "var(--text-hover)";

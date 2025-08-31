@@ -4,11 +4,13 @@ import Image from "next/image";
 import Pic from "../../public/Lumii_20250624_142647142.jpg";
 import styles from "./hero.module.css";
 import { useNav } from "../../context/NavContext";
+
 function Hero() {
   const { scrollToSection } = useNav();
+
   return (
-    <div className=" w-full overflow-hidden flex flex-col-reverse md:flex-row items-center justify-between gap-[1em]  ">
-      <div className={`${styles.imgContainer} flex-shrink-0 `}>
+    <div className="w-full overflow-hidden flex flex-col-reverse md:flex-row items-center justify-between gap-[1em]">
+      <div className={`${styles.imgContainer} flex-shrink-0`}>
         <Image
           src={Pic}
           alt="Youseif's Img"
@@ -18,14 +20,44 @@ function Hero() {
           className="rounded-[20px] object-cover"
         />
       </div>
-      <div className="py-[10px] text-center md:text-left space-y-6  max-w-2xl">
+      <div className="py-[10px] text-center md:text-left space-y-6 max-w-2xl">
         {/* Greeting */}
         <div className="space-y-2">
           <p className="text-[var(--text-muted)] text-base md:text-lg font-medium tracking-wide animate-fade-in">
             Hello, I&apos;m
           </p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--text-secondary)] leading-tight">
-            <span className="block">Youseif Elshreif</span>
+            <div className="flex flex-col md:flex-row md:items-center md:gap-4 mb-0">
+              <span className="block">Youseif Elshreif</span>
+            </div>
+
+            {/* Availability Badges */}
+            <div className="flex flex-wrap gap-3 justify-center md:justify-start mb-4">
+              <div className="h-[20px]">
+                <span
+                  className="relative md:top-[-25px] inline-flex items-center gap-2 px-4 py-2 border border-white/30 rounded-full text-[var(--text-secondary)] text-sm font-semibold"
+                  style={{
+                    backgroundColor: "var(--nav-bg)",
+                    boxShadow: "0 0 0 0.1em hsla(0, 0%, 100%, 0.15) inset",
+                  }}
+                >
+                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                  Available for Freelance
+                </span>
+              </div>
+              <div className="h-[50px]">
+                <span
+                  className="relative md:top-[-25px] inline-flex items-center gap-2 px-4 py-2 border border-white/20 rounded-full text-[var(--text-primary)] text-sm font-semibold hover:border-white/30 transition-all duration-300"
+                  style={{
+                    backgroundColor: "var(--nav-bg)",
+                    boxShadow: "0 0 0 0.1em hsla(0, 0%, 100%, 0.1) inset",
+                  }}
+                >
+                  <div className="w-2 h-2 bg-[var(--text-hover)] rounded-full"></div>
+                  Open to Work
+                </span>
+              </div>
+            </div>
             <span className="block text-[var(--text-muted)] mt-2 font-normal text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
               Frontend Developer
             </span>
@@ -59,10 +91,10 @@ function Hero() {
             View Projects
           </button>
           <button
-            onClick={() => scrollToSection("1")}
             className="px-6 cursor-pointer sm:px-8 py-3 sm:py-4 border-2 border-[var(--nav-border)] rounded-lg font-semibold text-[var(--text-secondary)] hover:border-[var(--text-hover)] hover:bg-[var(--nav-bg)] transition-all duration-300 hover:scale-105 text-sm sm:text-base"
+            onClick={() => scrollToSection("3")}
           >
-            My Skills
+            Hire Me
           </button>
         </div>
       </div>

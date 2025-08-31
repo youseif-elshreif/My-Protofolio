@@ -122,6 +122,8 @@ const ContactMe: React.FC = () => {
                       <a
                         href={info.href}
                         className="text-[var(--text-secondary)] hover:text-[var(--text-hover)] transition-colors duration-300"
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
                         {info.value}
                       </a>
