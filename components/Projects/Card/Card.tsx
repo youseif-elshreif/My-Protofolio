@@ -10,6 +10,7 @@ const Card: React.FC<Project> = ({
   techs,
   githubUrl,
   liveDemoUrl,
+  freelance,
 }) => {
   return (
     <div
@@ -22,7 +23,7 @@ const Card: React.FC<Project> = ({
       <div className="relative overflow-hidden p-2 h-full rounded-[.25em]">
         <div className="absolute inset-0 rounded-[1.25em] bg-[var(--card-bg)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
 
-        <div className="flex  flex-col h-full">
+        <div className="flex flex-col h-full">
           {/* Image */}
           <div className="w-full h-[150px] lg:h-[140px] relative overflow-hidden ">
             <Image
@@ -32,6 +33,14 @@ const Card: React.FC<Project> = ({
               objectFit="cover"
               className="rounded-t-[0.8em]"
             />
+            {freelance && (
+              <span
+                className="absolute top-2 right-2 text-white text-xs font-medium px-2 py-1 rounded-md border border-white/50 shadow-md"
+                style={{ backgroundColor: "var(--card-bg)" }}
+              >
+                Freelance
+              </span>
+            )}
           </div>
 
           {/* Content */}
@@ -57,14 +66,16 @@ const Card: React.FC<Project> = ({
 
             {/* Buttons */}
             <div className="flex justify-between mt-6 gap-2">
-              <a
-                href={githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-1/2 text-center text-sm px-3 py-2 rounded-lg border border-white/10 text-white hover:bg-white/10 transition"
-              >
-                GitHub
-              </a>
+              {githubUrl && (
+                <a
+                  href={githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-1/2 text-center text-sm px-3 py-2 rounded-lg border border-white/10 text-white hover:bg-white/10 transition"
+                >
+                  GitHub
+                </a>
+              )}
               <a
                 href={liveDemoUrl}
                 target="_blank"

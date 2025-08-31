@@ -5,7 +5,6 @@ import SectionContainer from "../../components/SectionContainer/SectionContainer
 import Hero from "../../components/Hero/Hero";
 import Skills from "../../components/Skills/Skills";
 import Projects from "../../components/Projects/Projects";
-import Experience from "../../components/Experience/Experience";
 import ContactMe from "../../components/ContactMe/ContactMe";
 import { NavProvider, useNav } from "../../context/NavContext";
 // import CodePatternBackground from "../../components/CodePatternBackground/CodePatternBackground";
@@ -15,7 +14,7 @@ function HomeContent() {
     { id: 0, title: "ABOUT", mt: false, ele: <Hero /> },
     { id: 1, title: "SKILLS", ele: <Skills /> },
     { id: 2, title: "PROJECTS", ele: <Projects /> },
-    { id: 3, title: "EXPERIENCE", ele: <Experience /> },
+    { id: 3, title: "CONTACT", ele: <ContactMe /> },
   ];
 
   return (
@@ -36,7 +35,6 @@ function HomeContent() {
             {sec.ele}
           </SectionContainer>
         ))}
-        <ContactMe />
       </main>
       <Footer />
     </>

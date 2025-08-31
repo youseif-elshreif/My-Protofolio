@@ -15,6 +15,7 @@ function Projects() {
           techs={project.techs}
           githubUrl={project.githubUrl}
           liveDemoUrl={project.liveDemoUrl}
+          freelance={project.freelance}
         />
       ))}
     </div>

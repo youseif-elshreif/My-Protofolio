@@ -25,7 +25,7 @@ export const navigationSections: NavigationSection[] = [
   { id: "0", title: "About" },
   { id: "1", title: "Skills" },
   { id: "2", title: "Projects" },
-  { id: "3", title: "Experience" },
+  { id: "3", title: "Contact" },
 ];
 
 export const socialLinks: SocialLink[] = [
@@ -69,8 +69,8 @@ export const projectsItems: Project[] = [
     title: "Yaqen Academy",
     description: "Educational platform project",
     techs: ["Next", "TS", "Axios"],
-    githubUrl: "https://github.com/youseif-elshreif/YaqeinAcademy",
     liveDemoUrl: "https://youseif-elshreif.github.io/YaqeinAcademy/",
+    freelance: true,
   },
   {
     id: 2,
@@ -89,6 +89,7 @@ export const projectsItems: Project[] = [
     techs: ["HTML", "CSS", "JavaScript"],
     githubUrl: "https://github.com/youseif-elshreif/saifPortfolio-",
     liveDemoUrl: "https://abdulrahmansaif.me/",
+    freelance: true,
   },
   {
     id: 4,
@@ -98,6 +99,24 @@ export const projectsItems: Project[] = [
     techs: ["HTML", "CSS", "JavaScript"],
     githubUrl: "https://github.com/youseif-elshreif/technostore",
     liveDemoUrl: "https://youseif-elshreif.github.io/technostore/",
+  },
+  {
+    id: 5,
+    image: "/img/projects/todo.png",
+    title: "Todo App",
+    description: "A simple todo application",
+    techs: ["React", "Tailwind", "Formik", "Yup", "JSON server"],
+    githubUrl: "https://github.com/youseif-elshreif/ReactToDoList",
+    liveDemoUrl: "https://todoappiti.netlify.app/",
+  },
+  {
+    id: 6,
+    image: "/img/projects/iskan.png",
+    title: "Iskan",
+    description: "A real estate platform",
+    techs: ["Next", "Tailwind", "JSON server"],
+    githubUrl: "https://github.com/youseif-elshreif/Iskan",
+    liveDemoUrl: "https://isskan.netlify.app/",
   },
 ];
 

@@ -60,8 +60,9 @@ export interface Project {
   title: string;
   description: string;
   techs: string[];
-  githubUrl: string;
+  githubUrl?: string;
   liveDemoUrl: string;
+  freelance?: boolean;
 }
 
 export interface TiltedCardProps {
