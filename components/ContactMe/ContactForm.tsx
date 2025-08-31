@@ -85,28 +85,40 @@ const ContactForm: React.FC = () => {
         message: formData.message.trim(),
       };
 
+      // استخدام FormData بدلاً من JSON لتجنب CORS issues
+      const formDataToSend = new FormData();
+      formDataToSend.append("name", dataToSend.name);
+      formDataToSend.append("phone", dataToSend.phone);
+      formDataToSend.append("email", dataToSend.email);
+      formDataToSend.append("message", dataToSend.message);
+
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbzuOrjaKLG6j1FWeXcTv8xB5in2rK9pQ56A7-6-nXbY3a2XKeauAn9vUiEslXJoGl9L/exec",
+        "https://script.google.com/macros/s/AKfycbxkjxTt0INkBsnXlA9Rm7ivS9P3BWOU4Vrs5ys_xi-1AmY-SstqVtI9eZwBdJSe-JalGA/exec",
         {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(dataToSend),
+          body: formDataToSend,
         }
       );
 
       if (response.ok) {
-        setSubmitStatus({
-          type: "success",
-          message: "Message sent successfully! I will contact you soon.",
-        });
-        setFormData({
-          name: "",
-          phone: "",
-          email: "",
-          message: "",
-        });
+        const result = await response.json();
+        if (result.result === "success") {
+          setSubmitStatus({
+            type: "success",
+            message: "Message sent successfully!",
+          });
+          setTimeout(() => {
+            setSubmitStatus({ type: null, message: "" });
+          }, 3000);
+          setFormData({
+            name: "",
+            phone: "",
+            email: "",
+            message: "",
+          });
+        } else {
+          throw new Error(result.message || "Failed to send");
+        }
       } else {
         throw new Error("Failed to send");
       }
@@ -116,6 +128,9 @@ const ContactForm: React.FC = () => {
         type: "error",
         message: "An error occurred while sending. Please try again.",
       });
+      setTimeout(() => {
+        setSubmitStatus({ type: null, message: "" });
+      }, 3000);
     } finally {
       setIsSubmitting(false);
     }
@@ -225,7 +240,7 @@ const ContactForm: React.FC = () => {
           className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 border border-white/10 ${
             isSubmitting
               ? "opacity-60 cursor-not-allowed"
-              : "hover:border-white/20 hover:scale-[1.02]"
+              : "hover:border-white/20 hover:scale-[1.02] cursor-pointer"
           } text-[var(--text-secondary)] shadow-lg`}
           style={{
             backgroundColor: "var(--text-secondary)",
@@ -243,7 +258,7 @@ const ContactForm: React.FC = () => {
           }}
         >
           {isSubmitting ? (
-            <div className="flex items-center justify-center">
+            <div className="flex items-center justify-center gap-1">
               <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-[var(--bg-primary)] ml-2"></div>
               Sending ...
             </div>

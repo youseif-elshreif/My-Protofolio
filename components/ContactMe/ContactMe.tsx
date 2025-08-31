@@ -98,7 +98,7 @@ const ContactMe: React.FC = () => {
       {/* Contact Section */}
       <div className="w-full overflow-hidden flex flex-col lg:flex-row items-start justify-between gap-8 p-4">
         {/* Contact Info */}
-        <div className="flex-1 space-y-6">
+        <div className="flex-1 space-y-6 w-full">
           <div>
             <h3 className="text-xl md:text-2xl font-semibold mb-4 text-[var(--text-secondary)]">
               Contact Information

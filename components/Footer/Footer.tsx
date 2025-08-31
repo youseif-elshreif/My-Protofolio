@@ -1,7 +1,12 @@
 "use client";
 import React from "react";
-import { FaEnvelope, FaLinkedin, FaGithub, FaFacebook } from "react-icons/fa";
-import { FiPhone } from "react-icons/fi";
+import {
+  FaEnvelope,
+  FaLinkedin,
+  FaGithub,
+  FaFacebook,
+  FaPhone,
+} from "react-icons/fa";
 
 function Footer() {
   const social = [
@@ -79,7 +84,7 @@ function Footer() {
                     (e.target as HTMLElement).style.color = "var(--text-muted)";
                   }}
                 >
-                  <FiPhone />
+                  <FaPhone />
                   <span>+201277906691</span>
                 </a>
               </span>
