@@ -41,7 +41,7 @@ function Hero() {
                     boxShadow: "0 0 0 0.1em hsla(0, 0%, 100%, 0.15) inset",
                   }}
                 >
-                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                  <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse"></div>
                   Available for Freelance
                 </span>
               </div>
@@ -53,7 +53,7 @@ function Hero() {
                     boxShadow: "0 0 0 0.1em hsla(0, 0%, 100%, 0.1) inset",
                   }}
                 >
-                  <div className="w-2 h-2 bg-[var(--text-hover)] rounded-full"></div>
+                  <div className="w-2 h-2 bg-purple-600 rounded-full animate-pulse"></div>
                   Open to Work
                 </span>
               </div>
