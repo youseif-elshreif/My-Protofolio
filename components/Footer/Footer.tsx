@@ -12,13 +12,17 @@ function Footer() {
   const social = [
     {
       icon: FaLinkedin,
-      url: "https://linkedin.com",
+      url: "https://linkedin.com/in/youseif-elshreif",
       label: "LinkedIn",
     },
-    { icon: FaGithub, url: "https://github.com", label: "GitHub" },
+    {
+      icon: FaGithub,
+      url: "https://github.com/youseif-elshreif",
+      label: "GitHub",
+    },
     {
       icon: FaFacebook,
-      url: "https://facebook.com",
+      url: "https://www.facebook.com/youseif.elshreif",
       label: "Facebook",
     },
   ];
@@ -113,7 +117,7 @@ function Footer() {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full border flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg"
+                  className="w-10 h-10 rounded-full border flex items-center justify-center transition-all duration-300 hover:scale-110"
                   style={{
                     borderColor: "var(--nav-border)",
                     backgroundColor: "var(--nav-bg)",

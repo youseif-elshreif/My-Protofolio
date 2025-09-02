@@ -42,7 +42,7 @@ export const socialLinks: SocialLink[] = [
   {
     id: "resume",
     title: "Resume",
-    url: "#",
+    url: "https://drive.google.com/file/d/1mwpJ4zK8dWzE9NUINdywFCnYOA7Xo4tz/view?usp=sharing",
   },
 ];
 
