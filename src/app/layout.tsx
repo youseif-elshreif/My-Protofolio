@@ -16,6 +16,9 @@ const ibmPlexSans = IBM_Plex_Sans({
 export const metadata = {
   title: "Youseif Elshreif",
   description: "Portfolio of Youseif Elshreif",
+  icons: {
+    icon: "/fav.png",
+  },
 };
 
 export default function RootLayout({
