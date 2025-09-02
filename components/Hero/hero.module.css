@@ -9,7 +9,7 @@
   top: -10px;
   width: 100%;
   height: calc(100% + 20px);
-  background: radial-gradient(circle, transparent 0%, var(--bg-primary) 70%);
+  background: radial-gradient(circle, transparent 0%, var(--bg-primary) 85%);
 }
 
 @media (max-width: 1024px) {

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Pic from "../../public/Lumii_20250624_142647142.jpg";
+import Pic from "../../public/img/me/me.jpg";
 import styles from "./hero.module.css";
 import { useNav } from "../../context/NavContext";
 
@@ -47,7 +47,7 @@ function Hero() {
               </div>
               <div className="h-[50px]">
                 <span
-                  className="relative md:top-[-25px] inline-flex items-center gap-2 px-4 py-2 border border-white/20 rounded-full text-[var(--text-primary)] text-sm font-semibold hover:border-white/30 transition-all duration-300"
+                  className="relative top-3 md:top-[-25px] inline-flex items-center gap-2 px-4 py-2 border border-white/20 rounded-full text-[var(--text-primary)] text-sm font-semibold hover:border-white/30 transition-all duration-300"
                   style={{
                     backgroundColor: "var(--nav-bg)",
                     boxShadow: "0 0 0 0.1em hsla(0, 0%, 100%, 0.1) inset",

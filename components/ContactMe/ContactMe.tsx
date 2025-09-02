@@ -4,7 +4,6 @@ import {
   FaFacebookF,
   FaGithub,
   FaLinkedinIn,
-  FaEnvelope,
   FaWhatsapp,
   FaMapMarkerAlt,
 } from "react-icons/fa";
@@ -56,16 +55,6 @@ const ContactMe: React.FC = () => {
       transform: "translate(50px, -25px)",
     },
     {
-      icon: <SiGmail size={16} />,
-      transform: "translate(55px, 5px)",
-      href: "mailto:youseifelshreif3@gmail.com",
-    },
-    {
-      icon: <FaWhatsapp size={16} />,
-      href: "https://wa.me/201277906691",
-      transform: "translate(40px, 35px)",
-    },
-    {
       icon: <FaFacebookF size={16} />,
       href: "https://facebook.com/yourprofile",
       transform: "translate(15px, 50px)",
@@ -74,7 +63,7 @@ const ContactMe: React.FC = () => {
 
   const contactInfo = [
     {
-      icon: <FaEnvelope className="text-2xl text-[var(--text-muted)]" />,
+      icon: <SiGmail className="text-2xl text-[var(--text-muted)]" />,
       title: "Email",
       value: "youseifelshreif3@gmail.com",
       href: "mailto:youseifelshreif3@gmail.com",
@@ -181,7 +170,7 @@ const ContactMe: React.FC = () => {
             boxShadow: "0 0 0 0.1em hsla(0, 0%, 100%, 0.1) inset",
           }}
         >
-          <FaEnvelope size={18} />
+          <SiGmail size={18} />
         </button>
 
         {/* Radial Icons */}
