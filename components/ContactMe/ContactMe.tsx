@@ -8,7 +8,6 @@ import {
   FaLinkedinIn,
   FaFacebookF,
 } from "react-icons/fa";
-import { SiGmail } from "react-icons/si";
 import { AiOutlineFileText } from "react-icons/ai";
 import ContactForm from "./ContactForm";
 

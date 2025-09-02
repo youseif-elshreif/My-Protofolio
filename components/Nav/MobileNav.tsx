@@ -54,7 +54,7 @@ function MobileNav({ sections, isMenuOpen, setIsMenuOpen }: MobileNavProps) {
       {/* Mobile Menu */}
       {(isMenuOpen || isClosing) && (
         <div
-          className={`mobNav lg:hidden absolute top-45px left-0 w-full z-100  shadow-2xl h-[calc(100vh-65px)] fixed overflow-y-auto ${
+          className={`mobNav lg:hidden top-45px left-0 w-full z-100  shadow-2xl h-[calc(100vh-65px)] fixed overflow-y-auto ${
             isClosing ? "closing" : ""
           }`}
           style={{
