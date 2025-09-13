@@ -57,7 +57,9 @@ export interface GlassIconsProps {
 export interface Project {
   id: number;
   image: string | StaticImageData;
+  imgs: string[]; // Array of project images for swiper
   title: string;
+  shortDescription: string;
   description: string;
   techs: string[];
   githubUrl?: string;

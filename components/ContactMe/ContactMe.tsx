@@ -10,28 +10,29 @@ import {
 } from "react-icons/fa";
 import { AiOutlineFileText } from "react-icons/ai";
 import ContactForm from "./ContactForm";
+import SocialLinkButton from "../shared/SocialLinkButton";
 
 const ContactMe: React.FC = () => {
-  const handleLinkClick = (href: string) => {
-    window.open(href, "_blank", "noopener,noreferrer");
-  };
-
   const contacts = [
     {
       icon: <FaLinkedinIn size={16} />,
       href: "https://linkedin.com/in/youseif-elshreif",
+      label: "LinkedIn Profile",
     },
     {
       icon: <FaGithub size={16} />,
       href: "https://github.com/youseif-elshreif",
+      label: "GitHub Profile",
     },
     {
       icon: <AiOutlineFileText size={16} />,
       href: "https://drive.google.com/file/d/1mwpJ4zK8dWzE9NUINdywFCnYOA7Xo4tz/view?usp=sharing",
+      label: "Resume/CV",
     },
     {
       icon: <FaFacebookF size={16} />,
       href: "https://www.facebook.com/youseif.elshreif",
+      label: "Facebook Profile",
     },
   ];
 
@@ -101,18 +102,13 @@ const ContactMe: React.FC = () => {
         <div>
           <div className="flex gap-3 flex-wrap">
             {contacts.map((contact, index) => (
-              <button
+              <SocialLinkButton
                 key={index}
-                onClick={() => handleLinkClick(contact.href)}
-                className="w-12 h-12 rounded-lg border border-white/10 flex items-center justify-center text-[var(--text-secondary)] hover:border-white/20 hover:scale-110 transition-all duration-300 cursor-pointer"
-                style={{
-                  backgroundColor: "var(--nav-bg)",
-                  boxShadow: "0 0 0 0.1em hsla(0, 0%, 100%, 0.1) inset",
-                }}
-                aria-label={`Social link ${index}`}
-              >
-                {contact.icon}
-              </button>
+                icon={contact.icon}
+                href={contact.href}
+                ariaLabel={contact.label}
+                size="md"
+              />
             ))}
           </div>
         </div>

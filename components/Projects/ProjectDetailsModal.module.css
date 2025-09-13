@@ -1,0 +1,72 @@
+/* Custom Swiper Styles for Project Modal */
+.projectSwiper {
+  width: 100%;
+  height: 100%;
+}
+
+.projectSwiper .swiper-button-next,
+.projectSwiper .swiper-button-prev {
+  color: var(--text-secondary);
+  background: var(--nav-bg);
+  border: 2px solid var(--nav-border);
+  border-radius: 8px;
+  width: 44px;
+  height: 44px;
+  margin-top: -22px;
+  box-shadow: 0 0 0 0.1em hsla(0, 0%, 100%, 0.1) inset,
+    0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.projectSwiper .swiper-button-next:hover,
+.projectSwiper .swiper-button-prev:hover {
+  border-color: var(--text-secondary);
+  transform: scale(1.05);
+  box-shadow: 0 0 0 0.1em hsla(0, 0%, 100%, 0.2) inset,
+    0 6px 20px rgba(0, 0, 0, 0.4);
+  background: var(--sec-bg);
+}
+
+.projectSwiper .swiper-button-next:after,
+.projectSwiper .swiper-button-prev:after {
+  font-size: 16px;
+  font-weight: 900;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.projectSwiper .swiper-button-next {
+  right: 10px;
+}
+
+.projectSwiper .swiper-button-prev {
+  left: 10px;
+}
+
+.projectSwiper .swiper-pagination {
+  bottom: 15px;
+  padding: 0 20px;
+}
+
+.projectSwiper .swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid var(--nav-border);
+  opacity: 1;
+  transition: all 0.3s ease;
+  width: 12px;
+  height: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.projectSwiper .swiper-pagination-bullet-active {
+  background: var(--text-secondary);
+  border-color: var(--text-secondary);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 2px 8px rgba(0, 0, 0, 0.3);
+  transform: scale(1.2);
+}
+
+.projectSwiper .swiper-pagination-bullet:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.6);
+  border-color: rgba(255, 255, 255, 0.4);
+}

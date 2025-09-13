@@ -66,8 +66,16 @@ export const projectsItems: Project[] = [
   {
     id: 1,
     image: "/img/projects/yaqen.png",
+    imgs: [
+      "/img/projects/yaqen.png",
+      "/img/projects/yaqen.png",
+      "/img/projects/yaqen.png",
+      "/img/projects/yaqen.png",
+    ],
     title: "Yaqen Academy",
-    description: "Educational platform project",
+    shortDescription: "Educational platform with modern UI/UX",
+    description:
+      "A comprehensive educational platform built with Next.js and TypeScript. Features include course management, student dashboard, interactive learning modules, and responsive design for optimal learning experience across all devices.",
     techs: ["Next", "TS", "Axios"],
     liveDemoUrl: "https://youseif-elshreif.github.io/YaqeinAcademy/",
     freelance: true,
@@ -75,8 +83,16 @@ export const projectsItems: Project[] = [
   {
     id: 2,
     image: "/img/projects/friendloop.png",
+    imgs: [
+      "/img/projects/friendloop.png",
+      "/img/projects/friendloop.png",
+      "/img/projects/friendloop.png",
+      "/img/projects/friendloop.png",
+    ],
     title: "FriendLoop",
-    description: "Social media platform project",
+    shortDescription: "Social media platform with real-time features",
+    description:
+      "A modern social media platform built with React and Material-UI. Features include user authentication, real-time messaging, post creation and sharing, friend connections, news feed, and responsive design. Integrated with REST APIs for seamless data management.",
     techs: ["React", "MUI", "Axios"],
     githubUrl: "https://github.com/youseif-elshreif/Frendloop",
     liveDemoUrl: "https://youseif-elshreif.github.io/Frendloop/",
@@ -84,8 +100,16 @@ export const projectsItems: Project[] = [
   {
     id: 3,
     image: "/img/projects/saif.png",
+    imgs: [
+      "/img/projects/saif.png",
+      "/img/projects/saif.png",
+      "/img/projects/saif.png",
+      "/img/projects/saif.png",
+    ],
     title: "Social media specialist's Portfolio",
-    description: "Personal portfolio project",
+    shortDescription: "Professional portfolio with elegant design",
+    description:
+      "A sophisticated personal portfolio website for a social media specialist. Built with vanilla HTML, CSS, and JavaScript, featuring smooth animations, responsive design, portfolio showcase, contact forms, and optimized performance. Deployed with custom domain and SEO optimization.",
     techs: ["HTML", "CSS", "JavaScript"],
     githubUrl: "https://github.com/youseif-elshreif/saifPortfolio-",
     liveDemoUrl: "https://abdulrahmansaif.me/",
@@ -94,8 +118,16 @@ export const projectsItems: Project[] = [
   {
     id: 4,
     image: "/img/projects/technostore.png",
+    imgs: [
+      "/img/projects/technostore.png",
+      "/img/projects/technostore.png",
+      "/img/projects/technostore.png",
+      "/img/projects/technostore.png",
+    ],
     title: "Technostore",
-    description: "E-commerce platform project",
+    shortDescription: "E-commerce platform for tech products",
+    description:
+      "A comprehensive e-commerce platform specializing in technology products. Features include product catalog, shopping cart, user authentication, order management, payment integration, product search and filtering, responsive design, and admin dashboard for inventory management.",
     techs: ["HTML", "CSS", "JavaScript"],
     githubUrl: "https://github.com/youseif-elshreif/technostore",
     liveDemoUrl: "https://youseif-elshreif.github.io/technostore/",
@@ -103,8 +135,16 @@ export const projectsItems: Project[] = [
   {
     id: 5,
     image: "/img/projects/todo.png",
+    imgs: [
+      "/img/projects/todo.png",
+      "/img/projects/todo.png",
+      "/img/projects/todo.png",
+      "/img/projects/todo.png",
+    ],
     title: "Todo App",
-    description: "A simple todo application",
+    shortDescription: "Task management with advanced features",
+    description:
+      "A feature-rich todo application built with React and Tailwind CSS. Includes task creation, editing, and deletion, priority levels, due dates, categories, search functionality, local storage persistence, form validation with Formik and Yup, and JSON server for backend simulation.",
     techs: ["React", "Tailwind", "Formik", "Yup", "JSON server"],
     githubUrl: "https://github.com/youseif-elshreif/ReactToDoList",
     liveDemoUrl: "https://todoappiti.netlify.app/",
@@ -112,8 +152,16 @@ export const projectsItems: Project[] = [
   {
     id: 6,
     image: "/img/projects/iskan.png",
+    imgs: [
+      "/img/projects/iskan.png",
+      "/img/projects/iskan.png",
+      "/img/projects/iskan.png",
+      "/img/projects/iskan.png",
+    ],
     title: "Iskan",
-    description: "A real estate platform",
+    shortDescription: "Modern real estate platform",
+    description:
+      "A comprehensive real estate platform built with Next.js and Tailwind CSS. Features property listings, advanced search and filtering, property details with image galleries, contact forms, responsive design, and JSON server for data management. Optimized for performance and SEO.",
     techs: ["Next", "Tailwind", "JSON server"],
     githubUrl: "https://github.com/youseif-elshreif/Iskan",
     liveDemoUrl: "https://isskan.netlify.app/",

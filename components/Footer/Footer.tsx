@@ -2,26 +2,27 @@
 import React from "react";
 import {
   FaEnvelope,
-  FaLinkedin,
+  FaLinkedinIn,
   FaGithub,
   FaFacebook,
   FaPhone,
 } from "react-icons/fa";
+import SocialLinkButton from "../shared/SocialLinkButton";
 
 function Footer() {
   const social = [
     {
-      icon: FaLinkedin,
+      icon: <FaLinkedinIn className="text-sm" />,
       url: "https://linkedin.com/in/youseif-elshreif",
       label: "LinkedIn",
     },
     {
-      icon: FaGithub,
+      icon: <FaGithub className="text-sm" />,
       url: "https://github.com/youseif-elshreif",
       label: "GitHub",
     },
     {
-      icon: FaFacebook,
+      icon: <FaFacebook className="text-sm" />,
       url: "https://www.facebook.com/youseif.elshreif",
       label: "Facebook",
     },
@@ -111,33 +112,14 @@ function Footer() {
               Connect
             </h3>
             <div className="flex gap-4">
-              {social.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full border flex items-center justify-center transition-all duration-300 hover:scale-110"
-                  style={{
-                    borderColor: "var(--nav-border)",
-                    backgroundColor: "var(--nav-bg)",
-                    color: "var(--text-muted)",
-                  }}
-                  onMouseEnter={(e) => {
-                    (e.target as HTMLElement).style.backgroundColor =
-                      "var(--nav-indicator)";
-                    (e.target as HTMLElement).style.color =
-                      "var(--text-secondary)";
-                  }}
-                  onMouseLeave={(e) => {
-                    (e.target as HTMLElement).style.backgroundColor =
-                      "var(--nav-bg)";
-                    (e.target as HTMLElement).style.color = "var(--text-muted)";
-                  }}
-                  aria-label={social.label}
-                >
-                  <social.icon className="text-sm" />
-                </a>
+              {social.map((item) => (
+                <SocialLinkButton
+                  key={item.label}
+                  icon={item.icon}
+                  href={item.url}
+                  ariaLabel={item.label}
+                  size="sm"
+                />
               ))}
             </div>
           </div>

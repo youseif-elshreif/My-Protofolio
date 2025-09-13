@@ -145,3 +145,75 @@ a {
 .nav-scrollbar::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.5);
 }
+
+/* Custom Swiper Styles for Project Modal */
+.custom-project-swiper .swiper-button-next,
+.custom-project-swiper .swiper-button-prev {
+  color: var(--text-secondary) !important;
+  background: rgba(0, 0, 0, 0.3) !important;
+  border: 2px solid var(--nav-border) !important;
+  border-radius: 8px !important;
+  width: 44px !important;
+  height: 44px !important;
+  margin-top: -22px !important;
+  box-shadow: 0 0 0 0.1em hsla(0, 0%, 100%, 0.1) inset,
+    0 4px 15px rgba(0, 0, 0, 0.3) !important;
+  transition: all 0.3s ease !important;
+  backdrop-filter: blur(10px);
+}
+.custom-project-swiper .swiper-button-next {
+  right: 20px !important;
+}
+.custom-project-swiper .swiper-button-prev {
+  left: 20px !important;
+}
+
+.custom-project-swiper .swiper-button-next:hover,
+.custom-project-swiper .swiper-button-prev:hover {
+  border-color: var(--text-secondary) !important;
+  transform: scale(1.05) !important;
+  box-shadow: 0 0 0 0.1em hsla(0, 0%, 100%, 0.2) inset,
+    0 6px 20px rgba(0, 0, 0, 0.4) !important;
+  background: var(--sec-bg) !important;
+}
+
+.custom-project-swiper .swiper-button-next:after,
+.custom-project-swiper .swiper-button-prev:after {
+  font-size: 16px !important;
+  font-weight: 900 !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.swiper-button-prev svg,
+.swiper-button-next svg {
+  width: 70% !important;
+  height: 70% !important;
+}
+
+.custom-project-swiper .swiper-pagination {
+  bottom: 15px !important;
+  padding: 0 20px;
+}
+
+.custom-project-swiper .swiper-pagination-bullet {
+  background: rgba(0, 0, 0, 0.3) !important;
+  border: 1px solid var(--nav-border) !important;
+  opacity: 1 !important;
+  transition: all 0.3s ease !important;
+  width: 12px !important;
+  height: 12px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.custom-project-swiper .swiper-pagination-bullet-active {
+  background: var(--text-secondary) !important;
+  border-color: var(--text-secondary) !important;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+  transform: scale(1.2) !important;
+}
+
+.custom-project-swiper .swiper-pagination-bullet:hover {
+  transform: scale(1.1) !important;
+  background: rgba(255, 255, 255, 0.6) !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+}

@@ -72,7 +72,7 @@ function Hero() {
 
         {/* Tech Stack Pills */}
         <div className="flex flex-wrap gap-2 sm:gap-3 justify-center md:justify-start">
-          {["React.js", "Next.js", "TypeScript"].map((tech) => (
+          {["Next.js", "React.js", "TypeScript"].map((tech) => (
             <span
               key={tech}
               className="px-3 py-1.5 sm:px-4 sm:py-2 bg-[var(--nav-bg)] border border-[var(--nav-border)] rounded-full text-[var(--text-primary)] text-xs sm:text-sm font-medium hover:border-[var(--text-hover)] hover:bg-[var(--bg-secondary)] transition-all duration-300 hover:scale-105 cursor-default"

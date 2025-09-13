@@ -1,16 +1,20 @@
 // components/Card.tsx
 import React from "react";
 import Image from "next/image";
+import { FaInfoCircle, FaCrown } from "react-icons/fa";
 import { Project } from "../../../utils/types";
 
-const Card: React.FC<Project> = ({
+interface CardProps extends Project {
+  onShowDetails: () => void;
+}
+
+const Card: React.FC<CardProps> = ({
   image,
   title,
-  description,
+  shortDescription,
   techs,
-  githubUrl,
-  liveDemoUrl,
   freelance,
+  onShowDetails,
 }) => {
   return (
     <div
@@ -34,28 +38,33 @@ const Card: React.FC<Project> = ({
               className="rounded-t-[0.8em]"
             />
             {freelance && (
-              <span
-                className="absolute top-2 right-2 text-white text-xs font-medium px-2 py-1 rounded-md border border-white/50 shadow-md"
+              <div
+                className="absolute top-2 right-2 flex items-center gap-1 px-2 py-1 rounded-md border border-yellow-500/30 shadow-md text-yellow-400 text-xs font-medium"
                 style={{ backgroundColor: "var(--card-bg)" }}
               >
+                <FaCrown size={10} />
                 Freelance
-              </span>
+              </div>
             )}
           </div>
 
           {/* Content */}
           <div className="flex flex-col flex-1 p-4 justify-between">
             <div>
-              <h2 className="text-lg font-semibold text-white">{title}</h2>
-              <p className="text-sm text-[#a89ec9] mt-2">{description}</p>
+              <h2 className="text-lg font-semibold text-[var(--text-secondary)]">
+                {title}
+              </h2>
+              <p className="text-sm text-[var(--text-primary)] mt-2">
+                {shortDescription}
+              </p>
 
               <div className="flex flex-wrap gap-2 mt-4 justify-space-between">
                 {techs.map((tech: string, i: number) => (
                   <span
                     key={i}
-                    className="text-xs px-2 py-1 rounded-full border border-white/10 text-white"
+                    className="text-xs px-2 py-1 rounded-full border border-white/10 text-[var(--text-primary)]"
                     style={{
-                      backgroundColor: "var(--nav-bg)",
+                      backgroundColor: "var(--bg-secondary)",
                     }}
                   >
                     {tech}
@@ -64,27 +73,18 @@ const Card: React.FC<Project> = ({
               </div>
             </div>
 
-            {/* Buttons */}
-            <div className="flex justify-between mt-6 gap-2">
-              {githubUrl && (
-                <a
-                  href={githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-1/2 text-center text-sm px-3 py-2 rounded-lg border border-white/10 text-white hover:bg-white/10 transition"
-                >
-                  GitHub
-                </a>
-              )}
-              <a
-                href={liveDemoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-1/2 text-center text-sm px-3 py-2 rounded-lg border border-white/10 text-white hover:bg-white/10 transition"
-              >
-                Live Demo
-              </a>
-            </div>
+            {/* Show Details Button */}
+            <button
+              onClick={onShowDetails}
+              className="flex items-center justify-center gap-2 mt-6 w-full text-sm px-4 py-3 rounded-lg border border-white/10 text-[var(--text-secondary)] hover:border-white/20 cursor-pointer transition-all duration-300"
+              style={{
+                backgroundColor: "var(--nav-bg)",
+                boxShadow: "0 0 0 0.1em hsla(0, 0%, 100%, 0.1) inset",
+              }}
+            >
+              <FaInfoCircle size={14} />
+              Show Details
+            </button>
           </div>
         </div>
       </div>
