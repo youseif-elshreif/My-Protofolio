@@ -87,7 +87,7 @@ const ProjectDetailsModal: React.FC<ProjectDetailsModalProps> = ({
               navigation
               pagination={{ clickable: true }}
               autoplay={{
-                delay: 3000,
+                delay: 300000,
                 disableOnInteraction: false,
               }}
               loop
@@ -95,12 +95,14 @@ const ProjectDetailsModal: React.FC<ProjectDetailsModalProps> = ({
             >
               {project.imgs.map((img, index) => (
                 <SwiperSlide key={index}>
-                  <div className="relative w-full h-64 md:h-80 overflow-hidden">
+                  <div className="relative w-full h-64 md:min-h-80 max-h-96 flex items-center justify-center bg-black/20">
                     <Image
                       src={img}
                       alt={`${project.title} - Image ${index + 1}`}
-                      fill
-                      className="object-cover m-auto"
+                      width={800}
+                      height={600}
+                      className="object-contain w-full h-auto max-h-full"
+                      style={{ maxWidth: "100%", height: "auto" }}
                     />
                   </div>
                 </SwiperSlide>

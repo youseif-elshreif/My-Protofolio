@@ -65,12 +65,12 @@ export const skillsItems: SkillItem[] = [
 export const projectsItems: Project[] = [
   {
     id: 1,
-    image: "/img/projects/yaqen.png",
+    image: "/img/projects/yaqen/cover.png",
     imgs: [
-      "/img/projects/yaqen.png",
-      "/img/projects/yaqen.png",
-      "/img/projects/yaqen.png",
-      "/img/projects/yaqen.png",
+      "/img/projects/yaqen/1.png",
+      "/img/projects/yaqen/2.png",
+      "/img/projects/yaqen/3.png",
+      "/img/projects/yaqen/4.png",
     ],
     title: "Yaqen Academy",
     shortDescription: "Educational platform with modern UI/UX",
@@ -82,29 +82,14 @@ export const projectsItems: Project[] = [
   },
   {
     id: 2,
-    image: "/img/projects/friendloop.png",
+    image: "/img/projects/saif/cover.png",
     imgs: [
-      "/img/projects/friendloop.png",
-      "/img/projects/friendloop.png",
-      "/img/projects/friendloop.png",
-      "/img/projects/friendloop.png",
-    ],
-    title: "FriendLoop",
-    shortDescription: "Social media platform with real-time features",
-    description:
-      "A modern social media platform built with React and Material-UI. Features include user authentication, real-time messaging, post creation and sharing, friend connections, news feed, and responsive design. Integrated with REST APIs for seamless data management.",
-    techs: ["React", "MUI", "Axios"],
-    githubUrl: "https://github.com/youseif-elshreif/Frendloop",
-    liveDemoUrl: "https://youseif-elshreif.github.io/Frendloop/",
-  },
-  {
-    id: 3,
-    image: "/img/projects/saif.png",
-    imgs: [
-      "/img/projects/saif.png",
-      "/img/projects/saif.png",
-      "/img/projects/saif.png",
-      "/img/projects/saif.png",
+      "/img/projects/saif/1.png",
+      "/img/projects/saif/2.png",
+      "/img/projects/saif/3.png",
+      "/img/projects/saif/4.png",
+      "/img/projects/saif/5.png",
+      "/img/projects/saif/6.png",
     ],
     title: "Social media specialist's Portfolio",
     shortDescription: "Professional portfolio with elegant design",
@@ -114,40 +99,6 @@ export const projectsItems: Project[] = [
     githubUrl: "https://github.com/youseif-elshreif/saifPortfolio-",
     liveDemoUrl: "https://abdulrahmansaif.me/",
     freelance: true,
-  },
-  {
-    id: 4,
-    image: "/img/projects/technostore.png",
-    imgs: [
-      "/img/projects/technostore.png",
-      "/img/projects/technostore.png",
-      "/img/projects/technostore.png",
-      "/img/projects/technostore.png",
-    ],
-    title: "Technostore",
-    shortDescription: "E-commerce platform for tech products",
-    description:
-      "A comprehensive e-commerce platform specializing in technology products. Features include product catalog, shopping cart, user authentication, order management, payment integration, product search and filtering, responsive design, and admin dashboard for inventory management.",
-    techs: ["HTML", "CSS", "JavaScript"],
-    githubUrl: "https://github.com/youseif-elshreif/technostore",
-    liveDemoUrl: "https://youseif-elshreif.github.io/technostore/",
-  },
-  {
-    id: 5,
-    image: "/img/projects/todo.png",
-    imgs: [
-      "/img/projects/todo.png",
-      "/img/projects/todo.png",
-      "/img/projects/todo.png",
-      "/img/projects/todo.png",
-    ],
-    title: "Todo App",
-    shortDescription: "Task management with advanced features",
-    description:
-      "A feature-rich todo application built with React and Tailwind CSS. Includes task creation, editing, and deletion, priority levels, due dates, categories, search functionality, local storage persistence, form validation with Formik and Yup, and JSON server for backend simulation.",
-    techs: ["React", "Tailwind", "Formik", "Yup", "JSON server"],
-    githubUrl: "https://github.com/youseif-elshreif/ReactToDoList",
-    liveDemoUrl: "https://todoappiti.netlify.app/",
   },
   {
     id: 6,
@@ -165,6 +116,40 @@ export const projectsItems: Project[] = [
     techs: ["Next", "Tailwind", "JSON server"],
     githubUrl: "https://github.com/youseif-elshreif/Iskan",
     liveDemoUrl: "https://isskan.netlify.app/",
+  },
+  {
+    id: 3,
+    image: "/img/projects/friendloop.png",
+    imgs: [
+      "/img/projects/friendloop.png",
+      "/img/projects/friendloop.png",
+      "/img/projects/friendloop.png",
+      "/img/projects/friendloop.png",
+    ],
+    title: "FriendLoop",
+    shortDescription: "Social media platform with real-time features",
+    description:
+      "A modern social media platform built with React and Material-UI. Features include user authentication, real-time messaging, post creation and sharing, friend connections, news feed, and responsive design. Integrated with REST APIs for seamless data management.",
+    techs: ["React", "MUI", "Axios"],
+    githubUrl: "https://github.com/youseif-elshreif/Frendloop",
+    liveDemoUrl: "https://youseif-elshreif.github.io/Frendloop/",
+  },
+  {
+    id: 5,
+    image: "/img/projects/todo.png",
+    imgs: [
+      "/img/projects/todo.png",
+      "/img/projects/todo.png",
+      "/img/projects/todo.png",
+      "/img/projects/todo.png",
+    ],
+    title: "Todo App",
+    shortDescription: "Task management with advanced features",
+    description:
+      "A feature-rich todo application built with React and Tailwind CSS. Includes task creation, editing, and deletion, priority levels, due dates, categories, search functionality, local storage persistence, form validation with Formik and Yup, and JSON server for backend simulation.",
+    techs: ["React", "Tailwind", "Formik", "Yup", "JSON server"],
+    githubUrl: "https://github.com/youseif-elshreif/ReactToDoList",
+    liveDemoUrl: "https://todoappiti.netlify.app/",
   },
 ];
 
