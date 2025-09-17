@@ -20,6 +20,15 @@ export const metadata = {
     width: "device-width",
     initialScale: 1,
   },
+  keywords: [
+    "Youseif Elshreif",
+    "Portfolio",
+    "Web Developer",
+    "Frontend Developer",
+    "React Developer",
+    "Next.js Developer",
+    "TypeScript Developer",
+  ],
   icons: {
     icon: "/fav.png",
   },
