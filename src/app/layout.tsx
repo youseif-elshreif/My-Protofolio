@@ -20,9 +20,6 @@ export const metadata = {
     width: "device-width",
     initialScale: 1,
   },
-  meta: {
-    "google-site-verification": "dKLb8jPJ6_JKC_18Vq2m3ELdHkiTYVM5Jwr8iVkPwmQ",
-  },
   icons: {
     icon: "/fav.png",
   },
@@ -35,6 +32,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <meta
+          name="google-site-verification"
+          content="dKLb8jPJ6_JKC_18Vq2m3ELdHkiTYVM5Jwr8iVkPwmQ"
+        />
+      </head>
       <body className={`${inter.variable} ${ibmPlexSans.variable}`}>
         {children}
       </body>
