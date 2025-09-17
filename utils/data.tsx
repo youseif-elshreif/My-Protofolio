@@ -120,12 +120,16 @@ export const projectsItems: Project[] = [
   },
   {
     id: 6,
-    image: "/img/projects/iskan.png",
+    image: "/img/projects/iskan/cover.png",
     imgs: [
-      "/img/projects/iskan.png",
-      "/img/projects/iskan.png",
-      "/img/projects/iskan.png",
-      "/img/projects/iskan.png",
+      "/img/projects/iskan/cover.png",
+      "/img/projects/iskan/1.png",
+      "/img/projects/iskan/2.png",
+      "/img/projects/iskan/3.png",
+      "/img/projects/iskan/4.png",
+      "/img/projects/iskan/5.png",
+      "/img/projects/iskan/6.png",
+      "/img/projects/iskan/7.png",
     ],
     title: "Iskan",
     shortDescription:
