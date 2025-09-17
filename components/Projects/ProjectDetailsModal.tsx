@@ -28,20 +28,31 @@ const ProjectDetailsModal: React.FC<ProjectDetailsModalProps> = ({
   useEffect(() => {
     if (isOpen) {
       setIsVisible(true);
-      setTimeout(() => setIsAnimating(true), 10);
+      // Small delay to ensure DOM is ready
+      const timer = setTimeout(() => setIsAnimating(true), 50);
+      return () => clearTimeout(timer);
     } else {
       setIsAnimating(false);
-      setTimeout(() => setIsVisible(false), 300);
+      // Wait for animation to complete before hiding
+      const timer = setTimeout(() => setIsVisible(false), 300);
+      return () => clearTimeout(timer);
     }
   }, [isOpen]);
 
-  if (!isVisible) return null;
+  const handleClose = () => {
+    setIsAnimating(false);
+    setTimeout(() => {
+      onClose();
+    }, 300);
+  };
 
   const handleBackdropClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {
-      onClose();
+      handleClose();
     }
   };
+
+  if (!isVisible) return null;
 
   return (
     <div
@@ -65,7 +76,7 @@ const ProjectDetailsModal: React.FC<ProjectDetailsModalProps> = ({
         <div className="p-4 flex items-center justify-between rounded-t-xl bg-black relative">
           <div className="flex items-center justify-start">
             <button
-              onClick={onClose}
+              onClick={handleClose}
               className="bg-[#ff5f56] w-[10px] h-[10px] rounded-full mr-2 shadow-[0_0_5px_#ff5f56] hover:shadow-[0_0_8px_#ff5f56] hover:scale-110 transition-all duration-300 cursor-pointer"
               title="Close"
             />
