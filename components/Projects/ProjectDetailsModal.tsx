@@ -28,12 +28,11 @@ const ProjectDetailsModal: React.FC<ProjectDetailsModalProps> = ({
   useEffect(() => {
     if (isOpen) {
       setIsVisible(true);
-      // Small delay to ensure DOM is ready
+      document.body.style.overflow = "hidden";
       const timer = setTimeout(() => setIsAnimating(true), 50);
       return () => clearTimeout(timer);
     } else {
       setIsAnimating(false);
-      // Wait for animation to complete before hiding
       const timer = setTimeout(() => setIsVisible(false), 300);
       return () => clearTimeout(timer);
     }
@@ -41,6 +40,7 @@ const ProjectDetailsModal: React.FC<ProjectDetailsModalProps> = ({
 
   const handleClose = () => {
     setIsAnimating(false);
+    document.body.style.overflow = "unset"; // Reset overflow immediately
     setTimeout(() => {
       onClose();
     }, 300);
