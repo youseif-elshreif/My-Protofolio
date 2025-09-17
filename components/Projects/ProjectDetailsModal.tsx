@@ -110,10 +110,7 @@ const ProjectDetailsModal: React.FC<ProjectDetailsModalProps> = ({
             </Swiper>
 
             {project.freelance && (
-              <div
-                className="absolute top-2 right-2 z-10 flex items-center gap-1 px-2 py-1 rounded-md border border-yellow-500/30 shadow-md text-yellow-400 text-xs font-medium"
-                style={{ backgroundColor: "var(--card-bg)" }}
-              >
+              <div className="absolute top-2 right-2 z-10 flex items-center gap-1 px-2 py-1 rounded-md border border-black-500/30 shadow-md text-black text-xs font-medium bg-white/75">
                 <FaCrown size={10} />
                 Freelance
               </div>

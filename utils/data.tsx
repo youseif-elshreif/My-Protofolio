@@ -138,42 +138,54 @@ export const projectsItems: Project[] = [
     liveDemoUrl: "https://isskan.netlify.app/",
   },
   {
-    id: 3,
-    image: "/img/projects/friendloop.png",
-    imgs: [
-      "/img/projects/friendloop.png",
-      "/img/projects/friendloop.png",
-      "/img/projects/friendloop.png",
-      "/img/projects/friendloop.png",
-    ],
-    title: "FriendLoop",
-    shortDescription: "Social media platform with real-time features",
-    descriptionHeading: "Social Media Platform",
-    description: [
-      "A modern social media platform built with React and Material-UI. Features include user authentication, real-time messaging, post creation and sharing, friend connections, news feed, and responsive design. Integrated with REST APIs for seamless data management.",
-    ],
-    techs: ["React", "MUI", "Axios"],
-    githubUrl: "https://github.com/youseif-elshreif/Frendloop",
-    liveDemoUrl: "https://youseif-elshreif.github.io/Frendloop/",
-  },
-  {
     id: 5,
-    image: "/img/projects/todo.png",
+    image: "/img/projects/todo/cover.png",
     imgs: [
-      "/img/projects/todo.png",
-      "/img/projects/todo.png",
-      "/img/projects/todo.png",
-      "/img/projects/todo.png",
+      "/img/projects/todo/cover.png",
+      "/img/projects/todo/1.png",
+      "/img/projects/todo/2.png",
+      "/img/projects/todo/3.png",
+      "/img/projects/todo/4.png",
     ],
     title: "Todo App",
-    shortDescription: "Task management with advanced features",
-    descriptionHeading: "Advanced Todo Application",
+    shortDescription:
+      "Advanced task management with categories, priorities, and deadlines",
+    descriptionHeading:
+      "A powerful and intuitive todo application designed to help you organize, prioritize, and track your tasks effortlessly for maximum productivity.",
     description: [
-      "A feature-rich todo application built with React and Tailwind CSS. Includes task creation, editing, and deletion, priority levels, due dates, categories, search functionality, local storage persistence, form validation with Formik and Yup, and JSON server for backend simulation.",
+      "Create your own account and manage tasks securely",
+      "Add, edit, and delete tasks with a simple interface",
+      "Set importance levels and due dates for better planning",
+      "Filter and sort tasks by priority, time, or completion status",
+      "Mark tasks as complete to track your progress",
+      "Clean, responsive design for a smooth experience on any device",
     ],
     techs: ["React", "Tailwind", "Formik", "Yup", "JSON server"],
     githubUrl: "https://github.com/youseif-elshreif/ReactToDoList",
     liveDemoUrl: "https://todoappiti.netlify.app/",
+  },
+  {
+    id: 3,
+    image: "/img/projects/friendloop/cover.png",
+    imgs: [
+      "/img/projects/friendloop/cover.png",
+      "/img/projects/friendloop/1.png",
+      "/img/projects/friendloop/2.png",
+    ],
+    title: "FriendLoop",
+    shortDescription:
+      "Simple social media platform to share posts and connect with friends",
+    descriptionHeading:
+      "A learning project to practice React, authentication, and basic CRUD features like posts and comments.",
+    description: [
+      "Create personal accounts and connect with others easily",
+      "Share your thoughts and ideas through posts",
+      "Edit or delete your posts anytime with full control",
+      "Simple and clean interface for a smooth user experience",
+    ],
+    techs: ["React", "MUI", "Axios"],
+    githubUrl: "https://github.com/youseif-elshreif/Frendloop",
+    liveDemoUrl: "https://youseif-elshreif.github.io/Frendloop/",
   },
 ];
 
