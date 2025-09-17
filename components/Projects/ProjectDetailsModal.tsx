@@ -158,9 +158,34 @@ const ProjectDetailsModal: React.FC<ProjectDetailsModalProps> = ({
               <h3 className="text-lg font-semibold text-[var(--text-secondary)] mb-3">
                 Project Details
               </h3>
-              <p className="text-[var(--text-primary)] leading-relaxed">
-                {project.description}
-              </p>
+              <div className="space-y-4">
+                <p className="text-[var(--text-primary)] text-lg leading-relaxed font-medium">
+                  {project.descriptionHeading}
+                </p>
+
+                <h4 className="text-md font-semibold text-[var(--text-secondary)] mt-4 mb-3 flex items-center gap-2">
+                  <span className="w-1 h-4 bg-gradient-to-b from-white to-gray-300 rounded-full"></span>
+                  Key Website Features
+                </h4>
+
+                <div className="grid gap-3">
+                  {project.description.map((desc, index) => (
+                    <div
+                      key={index}
+                      className="flex items-start gap-3 p-3 rounded-lg border border-white/5 transition-all duration-300 hover:border-white/10 hover:bg-white/5"
+                      style={{
+                        backgroundColor: "var(--card-bg)",
+                        boxShadow: "0 0 0 0.1em hsla(0, 0%, 100%, 0.05) inset",
+                      }}
+                    >
+                      <span className="flex-shrink-0 w-2 h-2 rounded-full mt-2 bg-white"></span>
+                      <p className="text-[var(--text-primary)] leading-relaxed flex-1">
+                        {desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
 
             {/* Action Buttons */}

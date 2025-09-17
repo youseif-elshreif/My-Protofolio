@@ -60,7 +60,8 @@ export interface Project {
   imgs: string[]; // Array of project images for swiper
   title: string;
   shortDescription: string;
-  description: string;
+  descriptionHeading: string;
+  description: string[];
   techs: string[];
   githubUrl?: string;
   liveDemoUrl: string;

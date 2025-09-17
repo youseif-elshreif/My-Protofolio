@@ -71,11 +71,24 @@ export const projectsItems: Project[] = [
       "/img/projects/yaqen/2.png",
       "/img/projects/yaqen/3.png",
       "/img/projects/yaqen/4.png",
+      "/img/projects/yaqen/5.png",
     ],
     title: "Yaqen Academy",
-    shortDescription: "Educational platform with modern UI/UX",
-    description:
-      "A comprehensive educational platform built with Next.js and TypeScript. Features include course management, student dashboard, interactive learning modules, and responsive design for optimal learning experience across all devices.",
+    shortDescription:
+      "Islamic platform for Quran memorization with certified teachers and flexible online learning",
+    descriptionHeading:
+      "YaqeenAcademy website is a sophisticated educational technology platform built with cutting-edge web technologies to deliver seamless Islamic learning experiences. Our platform combines modern web development with user-centric design to create an intuitive and powerful educational ecosystem.",
+    description: [
+      "Responsive design optimized for all devices (desktop, tablet, mobile)",
+      "Multi-role authentication system (students, teachers, administrators)",
+      "Interactive student dashboard with progress tracking and course management",
+      "Comprehensive teacher portal with class scheduling and student management tools",
+      "Advanced admin panel with user management, analytics, and system controls",
+      "Advanced search and filtering for courses and content",
+      "Interactive calendar system for class scheduling and events",
+      "Detailed reporting and analytics dashboard",
+      "Contact management system with social media integration",
+    ],
     techs: ["Next", "TS", "Axios"],
     liveDemoUrl: "https://youseif-elshreif.github.io/YaqeinAcademy/",
     freelance: true,
@@ -92,9 +105,14 @@ export const projectsItems: Project[] = [
       "/img/projects/saif/6.png",
     ],
     title: "Social media specialist's Portfolio",
-    shortDescription: "Professional portfolio with elegant design",
-    description:
-      "A sophisticated personal portfolio website for a social media specialist. Built with vanilla HTML, CSS, and JavaScript, featuring smooth animations, responsive design, portfolio showcase, contact forms, and optimized performance. Deployed with custom domain and SEO optimization.",
+    shortDescription: "A Professional portfolio to represent online presence",
+    descriptionHeading:
+      "A professional portfolio designed to showcase work, simplify client communication, and deliver projects in a more organized, appealing, and professional way — helping stand out and attract new opportunities.",
+    description: [
+      "Showcase of the client's unique skills and expertise",
+      "Clear presentation of services offered with real examples",
+      "Modern, responsive design for a seamless browsing experience",
+    ],
     techs: ["HTML", "CSS", "JavaScript"],
     githubUrl: "https://github.com/youseif-elshreif/saifPortfolio-",
     liveDemoUrl: "https://abdulrahmansaif.me/",
@@ -111,8 +129,10 @@ export const projectsItems: Project[] = [
     ],
     title: "Iskan",
     shortDescription: "Modern real estate platform",
-    description:
+    descriptionHeading: "Real Estate Platform",
+    description: [
       "A comprehensive real estate platform built with Next.js and Tailwind CSS. Features property listings, advanced search and filtering, property details with image galleries, contact forms, responsive design, and JSON server for data management. Optimized for performance and SEO.",
+    ],
     techs: ["Next", "Tailwind", "JSON server"],
     githubUrl: "https://github.com/youseif-elshreif/Iskan",
     liveDemoUrl: "https://isskan.netlify.app/",
@@ -128,8 +148,10 @@ export const projectsItems: Project[] = [
     ],
     title: "FriendLoop",
     shortDescription: "Social media platform with real-time features",
-    description:
+    descriptionHeading: "Social Media Platform",
+    description: [
       "A modern social media platform built with React and Material-UI. Features include user authentication, real-time messaging, post creation and sharing, friend connections, news feed, and responsive design. Integrated with REST APIs for seamless data management.",
+    ],
     techs: ["React", "MUI", "Axios"],
     githubUrl: "https://github.com/youseif-elshreif/Frendloop",
     liveDemoUrl: "https://youseif-elshreif.github.io/Frendloop/",
@@ -145,8 +167,10 @@ export const projectsItems: Project[] = [
     ],
     title: "Todo App",
     shortDescription: "Task management with advanced features",
-    description:
+    descriptionHeading: "Advanced Todo Application",
+    description: [
       "A feature-rich todo application built with React and Tailwind CSS. Includes task creation, editing, and deletion, priority levels, due dates, categories, search functionality, local storage persistence, form validation with Formik and Yup, and JSON server for backend simulation.",
+    ],
     techs: ["React", "Tailwind", "Formik", "Yup", "JSON server"],
     githubUrl: "https://github.com/youseif-elshreif/ReactToDoList",
     liveDemoUrl: "https://todoappiti.netlify.app/",
