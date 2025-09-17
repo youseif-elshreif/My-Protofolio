@@ -16,6 +16,13 @@ const ibmPlexSans = IBM_Plex_Sans({
 export const metadata = {
   title: "Youseif Elshreif",
   description: "Portfolio of Youseif Elshreif",
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+  },
+  meta: {
+    "google-site-verification": "dKLb8jPJ6_JKC_18Vq2m3ELdHkiTYVM5Jwr8iVkPwmQ",
+  },
   icons: {
     icon: "/fav.png",
   },
