@@ -26,7 +26,7 @@ const ProjectDetailsModal: React.FC<ProjectDetailsModalProps> = ({
   const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
-    
+
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         handleClose();
