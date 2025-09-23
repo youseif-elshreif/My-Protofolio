@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { FaGithub, FaExternalLinkAlt, FaCrown } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
@@ -24,12 +24,23 @@ const ProjectDetailsModal: React.FC<ProjectDetailsModalProps> = ({
 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
+  const swiperRef = useRef<any>(null);
 
   useEffect(() => {
 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         handleClose();
+      }
+      if (swiperRef.current && swiperRef.current.swiper) {
+        if (event.key === "ArrowRight") {
+          event.preventDefault();
+          swiperRef.current.swiper.slideNext();
+        }
+        if (event.key === "ArrowLeft") {
+          event.preventDefault();
+          swiperRef.current.swiper.slidePrev();
+        }
       }
     };
     document.addEventListener("keydown", handleKeyDown);
@@ -105,6 +116,7 @@ const ProjectDetailsModal: React.FC<ProjectDetailsModalProps> = ({
         <div className="overflow-y-auto max-h-[calc(90vh-92px)] md:max-h-[calc(90vh-72px)]">
           <div className="relative">
             <Swiper
+              ref={swiperRef}
               modules={[Navigation, Pagination, Autoplay]}
               spaceBetween={0}
               slidesPerView={1}
