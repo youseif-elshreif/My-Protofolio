@@ -26,6 +26,19 @@ const ProjectDetailsModal: React.FC<ProjectDetailsModalProps> = ({
   const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
+    
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        handleClose();
+      }
+    };
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []); //eslint-disable-line react-hooks/exhaustive-deps
+
+  useEffect(() => {
     if (isOpen) {
       setIsVisible(true);
       document.body.style.overflow = "hidden";
@@ -38,18 +51,18 @@ const ProjectDetailsModal: React.FC<ProjectDetailsModalProps> = ({
     }
   }, [isOpen]);
 
+  const handleBackdropClick = (e: React.MouseEvent) => {
+    if (e.target === e.currentTarget) {
+      handleClose();
+    }
+  };
+
   const handleClose = () => {
     setIsAnimating(false);
     document.body.style.overflow = "unset"; // Reset overflow immediately
     setTimeout(() => {
       onClose();
     }, 300);
-  };
-
-  const handleBackdropClick = (e: React.MouseEvent) => {
-    if (e.target === e.currentTarget) {
-      handleClose();
-    }
   };
 
   if (!isVisible) return null;

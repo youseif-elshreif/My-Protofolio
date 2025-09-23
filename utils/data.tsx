@@ -57,9 +57,9 @@ export const skillsItems: SkillItem[] = [
   { icon: <FaGitAlt size={30} />, label: "Git" },
   { icon: <RiBootstrapLine size={30} />, label: "Bootstrap" },
   { icon: <RiTailwindCssLine size={30} />, label: "Tailwind" },
-  { icon: <SiMui size={30} />, label: "MUI" },
   { icon: <SiAxios size={30} />, label: "Axios" },
   { icon: <SiFormik size={30} />, label: "Formik" },
+  { icon: <SiMui size={30} />, label: "MUI" },
 ];
 
 // Projects Data
