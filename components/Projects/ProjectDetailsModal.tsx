@@ -27,7 +27,6 @@ const ProjectDetailsModal: React.FC<ProjectDetailsModalProps> = ({
   const swiperRef = useRef<any>(null);
 
   useEffect(() => {
-
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         handleClose();
