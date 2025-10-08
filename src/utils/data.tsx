@@ -130,7 +130,7 @@ export const projectsItems: Project[] = [
       "Tailwind CSS",
       "AI Integration",
     ],
-    liveDemoUrl: "https://youseif-elshreif.github.io/Spatium/",
+    liveDemoUrl: "https://spatuim.vercel.app/",
     freelance: false,
   },
   {
