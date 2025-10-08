@@ -98,11 +98,15 @@ export const projectsItems: Project[] = [
     id: 6,
     image: "/img/projects/spatium/cover.png",
     imgs: [
+      "/img/projects/spatium/cover.png",
       "/img/projects/spatium/1.png",
       "/img/projects/spatium/2.png",
       "/img/projects/spatium/3.png",
       "/img/projects/spatium/4.png",
       "/img/projects/spatium/5.png",
+      "/img/projects/spatium/6.png",
+      "/img/projects/spatium/7.png",
+      "/img/projects/spatium/8.png",
     ],
     title: "Spatium",
     shortDescription:
@@ -115,7 +119,8 @@ export const projectsItems: Project[] = [
       "Interactive 3D experiences built with Three.js for visualizing satellite instruments and data",
       "Integrated AI chatbot that answers user questions about NASA missions and climate data",
       "Dynamic sections explaining each instrument’s role in monitoring Earth’s atmosphere and surface",
-      "Modern, responsive UI/UX optimized for smooth exploration on all devices",
+      "Modern UI/UX optimized primarily for desktop experience",
+      "Responsive design available for mobile, but performance is optimized for desktop as the focus was functionality for the hackathon",
       "Collaborative team project developed under NASA Space Apps Cairo 2025 hackathon",
     ],
     techs: [
