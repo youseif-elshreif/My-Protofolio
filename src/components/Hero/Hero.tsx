@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Pic from "../../public/img/me/me.jpg";
+import Pic from "../../../public/img/me/me.jpg";
 import styles from "./hero.module.css";
 import { useNav } from "../../context/NavContext";
 

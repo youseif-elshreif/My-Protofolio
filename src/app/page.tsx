@@ -1,14 +1,14 @@
 "use client";
-import Nav from "../../components/Nav/Nav";
-import Footer from "../../components/Footer/Footer";
-import SectionContainer from "../../components/SectionContainer/SectionContainer";
-import Hero from "../../components/Hero/Hero";
-import Skills from "../../components/Skills/Skills";
-import Projects from "../../components/Projects/Projects";
-import ContactMe from "../../components/ContactMe/ContactMe";
-import MobileFloatingContact from "../../components/ContactMe/MobileFloatingContact";
-import { NavProvider, useNav } from "../../context/NavContext";
-// import CodePatternBackground from "../../components/CodePatternBackground/CodePatternBackground";
+import Nav from "../components/Nav/Nav";
+import Footer from "../components/Footer/Footer";
+import SectionContainer from "../components/SectionContainer/SectionContainer";
+import Hero from "../components/Hero/Hero";
+import Skills from "../components/Skills/Skills";
+import Projects from "../components/Projects/Projects";
+import ContactMe from "../components/ContactMe/ContactMe";
+import MobileFloatingContact from "../components/ContactMe/MobileFloatingContact";
+import { NavProvider, useNav } from "../context/NavContext";
+// import CodePatternBackground from "../components/CodePatternBackground/CodePatternBackground";
 function HomeContent() {
   const { sectionsRef } = useNav();
   const sections = [
