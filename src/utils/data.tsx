@@ -95,6 +95,40 @@ export const projectsItems: Project[] = [
     freelance: true,
   },
   {
+    id: 6,
+    image: "/img/projects/spatium/cover.png",
+    imgs: [
+      "/img/projects/spatium/1.png",
+      "/img/projects/spatium/2.png",
+      "/img/projects/spatium/3.png",
+      "/img/projects/spatium/4.png",
+      "/img/projects/spatium/5.png",
+    ],
+    title: "Spatium",
+    shortDescription:
+      "Interactive AI-powered platform exploring NASA Terra satellite and Earth’s environmental data",
+    descriptionHeading:
+      "Spatium is an innovative educational platform developed for NASA Space Apps Cairo 2025 – Terra Challenge. It combines space science, AI, and interactive web technologies to make learning about NASA’s Terra satellite missions engaging and fun.",
+    description: [
+      "Explores NASA Terra satellite and its five key instruments: MODIS, ASTER, CERES, MISR, and MOPITT",
+      "Includes AI-powered educational games to test users’ knowledge about space and Earth observation",
+      "Interactive 3D experiences built with Three.js for visualizing satellite instruments and data",
+      "Integrated AI chatbot that answers user questions about NASA missions and climate data",
+      "Dynamic sections explaining each instrument’s role in monitoring Earth’s atmosphere and surface",
+      "Modern, responsive UI/UX optimized for smooth exploration on all devices",
+      "Collaborative team project developed under NASA Space Apps Cairo 2025 hackathon",
+    ],
+    techs: [
+      "Next.js",
+      "TypeScript",
+      "Three.js",
+      "Tailwind CSS",
+      "AI Integration",
+    ],
+    liveDemoUrl: "https://youseif-elshreif.github.io/Spatium/",
+    freelance: false,
+  },
+  {
     id: 2,
     image: "/img/projects/saif/cover.png",
     imgs: [
